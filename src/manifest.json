@@ -1,0 +1,10 @@
+{
+  "name": "Dev Tips",
+  "lang": "en",
+  "start_url": "/",
+  "display": "browser",
+  "orientation": "any",
+  "description": "Short dev tips about everyday routine from Nikita Dubko",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

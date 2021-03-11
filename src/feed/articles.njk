@@ -1,0 +1,36 @@
+---
+title: test
+description: test
+language: en
+url: https://tips.mefody.dev
+domain: https://tips.mefody.dev
+permalink: feed/index.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>{{ title }}</title>
+        <description>{{ description }}</description>
+        <language>{{ language }}</language>
+        <link>{{ url }}</link>
+
+        {%- for article in collections.article | filterLastArticle -%}
+            <lastBuildDate>{{ article.date.toUTCString() }}</lastbuilddate>
+        {%- endfor -%}
+
+        {%- for article in collections.article | reverse  %}
+            <item>
+                <title>{{ article.data.title }}</title>
+                <link href="{{ domain }}{{ article.url }}"/>
+                <description>
+                    <![CDATA[
+                        {{ article | fixLinks | safe }}
+                    ]]>
+                </description>
+                <pubdate>{{ article.date.toUTCString() }}</pubdate>
+                <guid>{{ article.url | url }}</guid>
+            </item>
+        {%- endfor %}
+
+    </channel>
+</rss>

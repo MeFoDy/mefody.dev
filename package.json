@@ -1,0 +1,42 @@
+{
+  "name": "tips.mefody.dev",
+  "version": "0.0.1",
+  "homepage": "/",
+  "private": true,
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "autoprefixer": "^10.0.1",
+    "del": "^6.0.0",
+    "editorconfig-checker": "^3.3.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-rewrite": "^3.0.3",
+    "gulp-terser": "^1.4.0",
+    "html-minifier": "^4.0.0",
+    "hyphen": "^1.6.2",
+    "markdown-it-multimd-table": "^4.0.3",
+    "node-fetch": "^2.6.1",
+    "postcss": "^8.1.1",
+    "postcss-color-hex-alpha": "^6.0.0",
+    "postcss-css-variables": "^0.17.0",
+    "postcss-csso": "^5.0.0",
+    "postcss-import": "^12.0.1",
+    "pretty-data": "^0.40.0",
+    "stylelint": "^13.8.0",
+    "vinyl-paths": "^3.0.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "echo 'Not ready yet'",
+    "start": "eleventy --serve --quiet",
+    "build": "rm -rf public && eleventy && gulp build",
+    "editorconfig": "editorconfig-checker",
+    "test:css": "stylelint \"src/styles/**/*.css\"",
+    "test": "npm run editorconfig && npm run test:css"
+  }
+}
