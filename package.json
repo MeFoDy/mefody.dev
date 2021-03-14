@@ -45,6 +45,9 @@
     "stylelint-order": "^4.1.0"
   },
   "lint-staged": {
+    "*": [
+      "editorconfig-checker"
+    ],
     "*.js": [
       "eslint --fix"
     ],
