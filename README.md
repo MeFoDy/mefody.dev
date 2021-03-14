@@ -7,7 +7,7 @@
 - [ ] manifest
 - [ ] service workers
 - [ ] ci/cd
-- [ ] netlify autorebuild
+- [x] netlify autorebuild
 - [ ] web mentions
 - [ ] 100 lighthouse score
 - [ ] 404
