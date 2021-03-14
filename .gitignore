@@ -9,8 +9,8 @@
 /coverage
 
 # production
-/build
-/public
+/_build
+/_public
 
 .idea
 

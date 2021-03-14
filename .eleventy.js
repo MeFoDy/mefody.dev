@@ -66,35 +66,14 @@ module.exports = function(config) {
 
     // Transforms
 
-    config.addTransform('htmlmin', (content, outputPath) => {
-        if (outputPath && outputPath.endsWith('.html')) {
-            let htmlmin = require('html-minifier');
-            let result = htmlmin.minify(
-                content,
-                {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    minifyJS: true
-                }
-            );
-            return result;
-        }
-        return content;
-    });
+    config.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
 
-    config.addTransform('xmlmin', function(content, outputPath) {
-        if (outputPath && outputPath.endsWith('.xml')) {
-            let prettydata = require('pretty-data');
-            let result = prettydata.pd.xmlmin(content);
-            return result;
-        }
-        return content;
-    });
+    config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
 
     return {
         dir: {
             input: 'src',
-            output: 'public',
+            output: '_public',
             includes: 'includes',
             layouts: 'layouts',
             data: 'data',

@@ -9,7 +9,6 @@
     "@babel/preset-env": "^7.12.0",
     "autoprefixer": "^10.0.1",
     "del": "^6.0.0",
-    "editorconfig-checker": "^3.3.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.0",
@@ -19,24 +18,41 @@
     "gulp-terser": "^1.4.0",
     "html-minifier": "^4.0.0",
     "hyphen": "^1.6.2",
-    "markdown-it-multimd-table": "^4.0.3",
     "node-fetch": "^2.6.1",
     "postcss": "^8.1.1",
     "postcss-color-hex-alpha": "^6.0.0",
-    "postcss-css-variables": "^0.17.0",
     "postcss-csso": "^5.0.0",
     "postcss-import": "^12.0.1",
     "pretty-data": "^0.40.0",
-    "stylelint": "^13.8.0",
     "vinyl-paths": "^3.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "echo 'Not ready yet'",
     "start": "eleventy --serve --quiet",
-    "build": "rm -rf public && eleventy && gulp build",
-    "editorconfig": "editorconfig-checker",
-    "test:css": "stylelint \"src/styles/**/*.css\"",
-    "test": "npm run editorconfig && npm run test:css"
+    "build": "rm -rf _public && eleventy && gulp build",
+    "lint:css": "stylelint \"src/styles/**/*.css\"",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js"
+  },
+  "devDependencies": {
+    "editorconfig-checker": "^3.3.0",
+    "eslint": "^7.22.0",
+    "lint-staged": "^10.5.4",
+    "simple-git-hooks": "^2.0.3",
+    "stylelint": "^13.8.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged && npm run lint"
   }
 }

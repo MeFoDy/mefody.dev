@@ -6,8 +6,8 @@ module.exports = {
 
     formatTime(sec) {
         let hours = Math.floor(sec / 3600);
-        let minutes = Math.floor((sec - (hours * 3600)) / 60);
-        let seconds = sec - (hours * 3600) - (minutes * 60);
+        let minutes = Math.floor((sec - hours * 3600) / 60);
+        let seconds = sec - hours * 3600 - minutes * 60;
 
         if (hours && hours < 10) {
             hours = '0' + hours;
@@ -19,7 +19,7 @@ module.exports = {
             seconds = '0' + seconds;
         }
 
-        return `${hours ? (hours + ':') : ''}${minutes}:${seconds}`;
+        return `${hours ? hours + ':' : ''}${minutes}:${seconds}`;
     },
 
     formatDate(date) {
@@ -29,4 +29,4 @@ module.exports = {
 
         return `${day}`.padStart(2, '0') + '.' + `${month}`.padStart(2, '0') + '.' + + year;
     },
-}
+};

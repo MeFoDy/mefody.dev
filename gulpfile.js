@@ -4,29 +4,28 @@ const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const del = require('del');
 const rev = require('gulp-rev');
-const replace = require('gulp-replace');
 const revRewrite = require('gulp-rev-rewrite');
 const paths = require('vinyl-paths');
-const fs = require('fs');
+
+const PUBLIC_PATH = '_public';
 
 // Styles
 
 gulp.task('styles', () => {
-    return gulp.src('public/styles/styles.css')
+    return gulp.src(`${PUBLIC_PATH}/styles/styles.css`)
         .pipe(postcss([
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
-            require('postcss-css-variables'),
-            require('autoprefixer')({ grid: "autoplace" }),
+            require('autoprefixer')({ grid: 'autoplace' }),
             require('postcss-csso'),
         ]))
-        .pipe(gulp.dest('public/styles'));
+        .pipe(gulp.dest(`${PUBLIC_PATH}/styles`));
 });
 
 // Scripts
 
 gulp.task('scripts', () => {
-    return gulp.src('public/scripts/*.js')
+    return gulp.src(`${PUBLIC_PATH}/scripts/*.js`)
         .pipe(babel({
             presets: [
                 [
@@ -40,17 +39,17 @@ gulp.task('scripts', () => {
             ]
         }))
         .pipe(terser())
-        .pipe(gulp.dest('public/scripts'));
+        .pipe(gulp.dest(`${PUBLIC_PATH}/scripts`));
 });
 
 // Clean
 
 gulp.task('clean', () => {
     return del([
-        'public/styles/**/*',
-        '!public/styles/styles.css',
-        'public/scripts/**/*',
-        '!public/scripts/scripts.js',
+        `${PUBLIC_PATH}/styles/**/*`,
+        `!${PUBLIC_PATH}/styles/styles.css`,
+        `${PUBLIC_PATH}/scripts/**/*`,
+        `!${PUBLIC_PATH}/scripts/scripts.js`,
     ]);
 });
 
@@ -58,31 +57,30 @@ gulp.task('clean', () => {
 
 gulp.task('cache:hash', () => {
     return gulp.src([
-        'public/fonts/*.woff2',
-        'public/images/**/*.{svg,png,jpg}',
-        'public/scripts/*.js',
-        'public/styles/*.css',
-        'public/manifest.json'
+        `${PUBLIC_PATH}/fonts/*.woff2`,
+        `${PUBLIC_PATH}/images/**/*.{svg,png,jpg}`,
+        `${PUBLIC_PATH}/scripts/*.js`,
+        `${PUBLIC_PATH}/styles/*.css`,
+        `${PUBLIC_PATH}/manifest.json`,
     ], {
-        base: 'public'
+        base: PUBLIC_PATH
     })
         .pipe(paths(del))
         .pipe(rev())
-        .pipe(gulp.dest('public'))
+        .pipe(gulp.dest(PUBLIC_PATH))
         .pipe(rev.manifest('rev.json'))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest(PUBLIC_PATH));
 });
 
 gulp.task('cache:replace', () => {
     return gulp
         .src([
-            'public/**/*.{html,css}',
-            'public/manifest-*.json',
+            `${PUBLIC_PATH}/**/*.{html,css}`, `${PUBLIC_PATH}/manifest-*.json`,
         ])
         .pipe(revRewrite({
-            manifest: gulp.src('public/rev.json')
+            manifest: gulp.src(`${PUBLIC_PATH}/rev.json`)
         }))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest(PUBLIC_PATH));
 });
 
 gulp.task('cache', gulp.series(

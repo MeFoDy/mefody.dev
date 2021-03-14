@@ -4,7 +4,7 @@ module.exports = {
     description: 'TODO',
     paths: {
         site: 'https://tips.mefody.dev',
-        feed: 'https://tips.mefody.dev/articles/feed/',
+        feed: 'https://tips.mefody.dev/feed/',
         social: 'https://tips.mefody.dev/images/social.png'
     },
     buildYear: new Date().getFullYear(),
