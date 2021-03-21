@@ -4,7 +4,8 @@ description: test
 language: en
 url: https://tips.mefody.dev
 domain: https://tips.mefody.dev
-permalink: feed/index.xml
+permalink: feed/rss.xml
+eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
@@ -14,11 +15,11 @@ permalink: feed/index.xml
         <language>{{ language }}</language>
         <link>{{ url }}</link>
 
-        {%- for article in collections.article | filterLastArticle -%}
+        {%- for article in collections.chunk | filterLastArticle -%}
             <lastBuildDate>{{ article.date.toUTCString() }}</lastbuilddate>
         {%- endfor -%}
 
-        {%- for article in collections.article | reverse  %}
+        {%- for article in collections.chunk | reverse  %}
             <item>
                 <title>{{ article.data.title }}</title>
                 <link href="{{ domain }}{{ article.url }}"/>

@@ -10,7 +10,8 @@
     "ecmaVersion": 12
   },
   "ignorePatterns": [
-    "_public"
+    "_public",
+    "!.eleventy.js"
   ],
   "rules": {
     "indent": [

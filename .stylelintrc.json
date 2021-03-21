@@ -111,7 +111,8 @@
       "always-multi-line",
       {
         "except": [
-          "first-nested"
+          "first-nested",
+          "after-single-line-comment"
         ]
       }
     ],
@@ -127,8 +128,9 @@
     "at-rule-empty-line-before": [
       "always",
       {
-        "except": [
+        "ignore": [
           "blockless-after-blockless",
+          "after-comment",
           "first-nested"
         ]
       }

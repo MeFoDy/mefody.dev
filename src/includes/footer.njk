@@ -1,4 +1,31 @@
 <footer class="footer">
-    &copy;
-    {{ helpers.currentYear() }}
+    <div class="footer__info">
+        <dl class="footer__about">
+            <dt>Nikita Dubko</dt>
+            <dd>CSS Evangelist</dd>
+            <dd><a href="https://mefody.dev/talks/">Tech speaker</a></dd>
+            <dd><a href="https://twitter.com/webstandards_ru">@webstandards_ru</a> editor</dd>
+        </dl>
+        <ul class="footer__social-list">
+            <li class="footer__social-item">
+                <a href="https://twitter.com/dev_tip" class="footer__social-link footer__social-link--twitter">Twitter</a>
+            </li>
+            <li class="footer__social-item">
+                <a href="https://github.com/MeFoDy" class="footer__social-link footer__social-link--github">GitHub</a>
+            </li>
+            <li class="footer__social-item">
+                <a href="https://www.linkedin.com/in/nikita-dubko-5bb1608b" class="footer__social-link footer__social-link--linkedin">LinkedIn</a>
+            </li>
+            <li class="footer__social-item">
+                <a href="/feed/rss.xml" class="footer__social-link footer__social-link--rss">RSS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__technologies">
+        This site is built with <a href="https://www.11ty.dev/">11ty</a> and hosted on <a href="https://www.netlify.com/">Netlify</a>. The source code is hosted on <a href="{{ site.paths.github }}">GitHub</a>.
+    </div>
+    <div class="footer__copyright">
+        &copy;
+        {{ helpers.currentYear() }} / Nikita Dubko
+    </div>
 </footer>

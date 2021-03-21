@@ -1,0 +1,226 @@
+.article {
+    display: grid;
+    grid-template-columns: var(--main-column-width) 1fr;
+    grid-gap: 0 1em;
+    width: 100%;
+}
+
+.article__meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--line-space);
+    margin-bottom: calc(2 * var(--line-space));
+    padding-bottom: var(--line-space);
+    color: var(--color-grey);
+    font-weight: 300;
+    border-bottom: 1px solid var(--color-yellow);
+}
+
+.article__meta > :not(:last-child)::after {
+    display: inline-block;
+    padding: 0 0.5em;
+    color: var(--color-lightgrey);
+    content: '·';
+}
+
+.article > * {
+    grid-column: 1 / span 1;
+}
+
+.article .article__head {
+    grid-column: 1 / -1;
+}
+
+.article.debug {
+    background-image: linear-gradient(to bottom, transparent 0 95%, lightblue 0);
+    background-size: 100% var(--line-space);
+}
+
+.article a {
+    color: var(--color-grey);
+    text-decoration-color: var(--color-yellow);
+    text-decoration-thickness: 2px;
+}
+
+.article a:hover {
+    background: var(--color-yellow-a3);
+}
+
+.article ul {
+    margin: 0;
+    margin-bottom: var(--line-space);
+    padding: 0;
+}
+
+.article p {
+    margin: 0;
+    margin-bottom: var(--line-space);
+}
+
+.article figure {
+    display: grid;
+    grid-template-columns: var(--main-column-width) 1fr;
+    grid-column: 1 / -1;
+    grid-gap: 0 1em;
+    margin: 0;
+    margin-bottom: var(--line-space);
+}
+
+.article figcaption {
+    padding-right: 1em;
+    color: var(--color-grey);
+    font-weight: 300;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+@media (max-width: 1250px) {
+    .article figure {
+        display: block;
+        grid-column: 1 / span 1;
+    }
+
+    .article figcaption {
+        padding-right: 0;
+    }
+
+    .article figcaption p {
+        margin-bottom: 0;
+    }
+}
+
+.article video {
+    max-width: 100%;
+    box-shadow: 0 0 1px 0 var(--color-black);
+}
+
+.article img {
+    max-width: 100%;
+    box-shadow: 0 0 1px 0 var(--color-black);
+}
+
+.article code,
+.article kbd {
+    padding: 0 0.3em;
+    font-family: 'Fira Code', monospace;
+    word-break: break-word;
+    background: var(--color-yellow-a3);
+    border-radius: 5px;
+    font-variant-ligatures: none;
+}
+
+.article pre {
+    grid-column: 1 / -1;
+    margin: 0;
+    margin-bottom: var(--line-space);
+    margin-left: calc(-1 * var(--line-space));
+    overflow-x: auto;
+    border-radius: 0.3em 0 0 0.3em;
+}
+
+.article pre code {
+    padding: 0;
+    background: none;
+}
+
+.article__footer {
+    margin-top: calc(2 * var(--line-space));
+    padding: var(--line-space) 0;
+    border-top: 1px solid var(--color-yellow);
+}
+
+.article__share {
+    margin-bottom: var(--line-space);
+}
+
+.article__share-button::after {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.25em;
+    vertical-align: middle;
+    background-image: url('/images/twitter-logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+}
+
+.article__nav-button[class] {
+    position: relative;
+    display: block;
+    padding: var(--line-space);
+    color: var(--color-black);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--color-yellow);
+}
+
+.article__nav-button.article__prev {
+    margin-bottom: var(--line-space);
+    padding-left: 3em;
+}
+
+.article__prev::before {
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    font-size: 1.5em;
+    transform: translateY(-50%);
+    content: '←';
+}
+
+.article__nav-button.article__next {
+    padding-right: 3em;
+}
+
+.article__next::after {
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    font-size: 1.5em;
+    transform: translateY(-50%);
+    content: '→';
+}
+
+@media (max-width: 1000px) {
+    .article {
+        grid-template-columns: 1fr;
+    }
+
+    .article .article__head {
+        grid-column: 1 / span 1;
+    }
+
+    .article pre {
+        margin-right: calc(-1 * var(--line-space));
+        border-radius: 0.3em;
+    }
+}
+
+@media (max-width: 800px) {
+    .article pre {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .article pre {
+        margin-right: calc(-1 * var(--mobile-border-width));
+        margin-left: calc(-1 * var(--mobile-border-width));
+        padding-right: var(--mobile-border-width);
+        padding-left: var(--mobile-border-width);
+        border-radius: 0;
+    }
+
+    .article figure {
+        margin-right: calc(-1 * var(--mobile-border-width));
+        margin-left: calc(-1 * var(--mobile-border-width));
+    }
+
+    .article figcaption {
+        padding-right: var(--mobile-border-width);
+        padding-left: var(--mobile-border-width);
+    }
+}

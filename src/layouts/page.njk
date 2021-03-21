@@ -9,18 +9,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{{ preview or site.description }}">
 
-        {% include 'open-graph.njk' %}
+        {% include 'favicon.njk' %}
 
-        {# <link rel="alternate" href="{{ site.paths.feed }}" type="application/rss+xml" title="TODO"> #}
+        {% include 'fonts.njk' %}
+
+        {% include 'meta-open-graph.njk' %}
+        {% include 'meta-rss.njk' %}
+
         <link rel="stylesheet" href="/styles/styles.css">
     </head>
     <body class="page__body">
 
         {% include 'header.njk' %}
 
-        <div class="page__content">
+        <main class="page__content">
             {{ content | safe }}
-        </div>
+        </main>
 
         {% include 'footer.njk' %}
     </body>

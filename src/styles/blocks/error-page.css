@@ -1,0 +1,9 @@
+.error-page {
+    max-width: var(--main-column-width);
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-size: 5em;
+}

@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    grid-column: 1 / span 1;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header__logo {
+    width: auto;
+    height: calc(var(--line-space) * 4);
+}
+
+.header__link {
+    margin: var(--line-space) 0;
+}
+
+@media (max-width: 1000px) {
+    .header {
+        grid-column: 2 / span 1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

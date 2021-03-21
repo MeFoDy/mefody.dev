@@ -1,0 +1,91 @@
+.footer {
+    grid-column: 1 / -1;
+    padding: calc(2 * var(--line-space)) var(--line-space);
+    border-top: 1px solid var(--color-yellow);
+}
+
+.footer a {
+    color: var(--color-grey);
+    text-decoration-color: var(--color-yellow);
+    text-decoration-thickness: 2px;
+}
+
+.footer a:hover {
+    background: var(--color-yellow-a3);
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: var(--main-column-width);
+    margin: 0 auto;
+    margin-bottom: calc(2 * var(--line-space));
+}
+
+.footer__about {
+    margin: 0;
+    padding: 0;
+}
+
+.footer__about dt {
+    font-weight: bold;
+}
+
+.footer__about dd {
+    margin: 0;
+    font-weight: 300;
+}
+
+.footer__social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__social-link::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.25em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: '';
+}
+
+.footer__social-link--twitter::before {
+    background-image: url('/images/twitter-logo.svg');
+}
+
+.footer__social-link--github::before {
+    background-image: url('/images/github-logo.svg');
+}
+
+.footer__social-link--linkedin::before {
+    background-image: url('/images/linkedin-logo.svg');
+}
+
+.footer__social-link--rss::before {
+    background-image: url('/images/rss-logo.svg');
+}
+
+.footer__technologies {
+    margin-bottom: var(--line-space);
+    font-weight: 300;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.footer__copyright {
+    font-weight: bold;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .footer {
+        padding: calc(2 * var(--line-space)) var(--mobile-border-width);
+    }
+}

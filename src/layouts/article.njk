@@ -1,5 +1,34 @@
 ---
 layout: page.njk
 ---
-
-{{ content | safe }}
+<article class="article">
+    <div class="article__head">
+        <h1 class="article__title">{{ title }}</h1>
+        <div class="article__meta">
+            <time class="article__datetime" datetime="{{ page.date.toISOString() }}">{{ page.date | readableDate }}</time>
+            <div class="article__minutes-to-read">{{ content | readingTime }} to read</div>
+            <a href="https://github.com/MeFoDy/tips.mefody.dev/blob/main/{{ page.inputPath }}" class="article__github">Edit this page on GitHub</a>
+        </div>
+    </div>
+    {{ content | safe }}
+    <div class="article__footer">
+        {% if tags %}
+            <ul class="article__tags tags">
+                {%- for tag in tags | filterTags -%}
+                    <li class="tags__item">
+                        <a href="#">#{{ tag }}</a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        {% endif %}
+        <div class="article__share">
+            If you like the article, you can <a class="article__share-button" href="https://twitter.com/intent/tweet?text={{ title }} by @{{ site.twitter }}&url={{ site.paths.site }}{{ page.url }}" target="_blank">share it on Twitter</a>
+        </div>
+        {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
+        {% set nextPost = collections.chunk | getNextCollectionItem(page) %}
+        <div class="article__nav">
+            {% if previousPost %}<a href="{{ previousPost.url }}" class="article__nav-button article__prev">{{ previousPost.data.title }}</a>{% endif %}
+            {% if nextPost %}<a href="{{ nextPost.url }}" class="article__nav-button article__next">{{ nextPost.data.title }}</a>{% endif %}
+        </div>
+    </div>
+</article>

@@ -1,24 +1,27 @@
 # TODO
 
-- [ ] layout
+- [x] netlify autorebuild
+- [x] license
+- [x] linters
+- [x] precommit hooks
+- [x] layout
+- [x] 404
+- [x] development favicon
+- [x] share (twitter)
+- [x] scroll-beahaviour
+- [ ] content
 - [ ] favicon
 - [ ] fonts
 - [ ] open graph
 - [ ] manifest
 - [ ] service workers
-- [ ] ci/cd
-- [x] netlify autorebuild
 - [ ] web mentions
 - [ ] 100 lighthouse score
-- [ ] 404
 - [ ] styleguide
-- [ ] share (twitter, fb, vk)
 - [ ] codepen embed
 - [ ] twitter embed lite
 - [ ] lazy loading
 - [ ] dark theme
-- [ ] scroll-beahaviour
-- [ ] custom scroll
 - [ ] cv
 - [ ] 11ty error-overlay
 - [ ] svg placeholder for images
@@ -27,13 +30,10 @@
 - [ ] json-ld
 - [ ] rss feed
 - [ ] jsonfeed
-- [ ] development favicon
 - [ ] tests
 - [ ] gif to video
 - [ ] native share
 - [ ] headers for netlify
-- [x] license
 - [ ] contributing
-- [x] linters
 - [ ] pagination
-- [x] precommit hooks
+- [ ] convert video for web as in https://evilmartians.com/chronicles/better-web-video-with-av1-codec

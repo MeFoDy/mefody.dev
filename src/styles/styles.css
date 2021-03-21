@@ -1,19 +1,44 @@
 /* Blocks */
+@import './blocks/prism.css';
+@import './blocks/page.css';
+@import './blocks/header.css';
+@import './blocks/site-nav.css';
+@import './blocks/collection.css';
+@import './blocks/article.css';
+@import './blocks/footer.css';
+@import './blocks/tags.css';
+@import './blocks/error-page.css';
 
-/* Globals */
+/* Variables */
+:root {
+    --color-grey: #797676;
+    --color-black: #000000;
+    --color-lightgrey: #bebbbb;
+    --color-yellow: #ffcc00;
+    --color-yellow-a3: #ffcc004d;
+    --color-blue: #0033ff;
+    --color-red: #ff4d00;
 
-/* :root {} */
-
-/* Global styles */
-
-body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overscroll-behavior: contain;
+    --line-height: 1.34;
+    --font-size: 18px;
+    --line-space: calc(var(--line-height) * 1em);
+    --main-column-width: 700px;
+    --mobile-border-width: 15px;
 }
 
+/* Global styles */
 :focus-visible {
     outline: none;
-    box-shadow: 0 0 5px 0 red;
+    box-shadow: 0 0 0 4px var(--color-red);
+}
+
+::selection {
+    color: var(--color-black);
+    background: var(--color-yellow);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --font-size: 16px;
+    }
 }
