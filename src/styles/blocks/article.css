@@ -31,6 +31,10 @@
     grid-column: 1 / -1;
 }
 
+.article__head > * {
+    max-width: var(--max-column-width);
+}
+
 .article.debug {
     background-image: linear-gradient(to bottom, transparent 0 95%, lightblue 0);
     background-size: 100% var(--line-space);
@@ -67,6 +71,7 @@
 }
 
 .article figcaption {
+    max-width: calc(var(--max-column-width) - var(--main-column-width));
     padding-right: 1em;
     color: var(--color-grey);
     font-weight: 300;
@@ -91,11 +96,13 @@
 
 .article video {
     max-width: 100%;
+    height: auto;
     box-shadow: 0 0 1px 0 var(--color-black);
 }
 
 .article img {
     max-width: 100%;
+    height: auto;
     box-shadow: 0 0 1px 0 var(--color-black);
 }
 

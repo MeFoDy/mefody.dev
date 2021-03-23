@@ -16,6 +16,10 @@
     border-bottom: 1px solid var(--color-yellow);
 }
 
+.collection__head > * {
+    max-width: var(--max-column-width);
+}
+
 .collection__description {
     margin-bottom: var(--line-space);
     padding: 0;

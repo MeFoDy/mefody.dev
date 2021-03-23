@@ -23,6 +23,7 @@
     --font-size: 18px;
     --line-space: calc(var(--line-height) * 1em);
     --main-column-width: 700px;
+    --max-column-width: 1000px;
     --mobile-border-width: 15px;
 }
 

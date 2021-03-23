@@ -1,16 +1,15 @@
 /**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
  */
 
 code[class*='language-'],
 pre[class*='language-'] {
-    color: black;
+    color: #f8f8f2;
     font-size: 1em;
     font-family: 'Fira Code', monospace;
     font-variant-ligatures: none;
-    line-height: 1.5;
     white-space: pre;
     text-align: left;
     word-wrap: normal;
@@ -26,49 +25,27 @@ pre[class*='language-'] {
     background: none;
 }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-    text-shadow: none;
-    background: #b3d4fc;
-}
-
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
-    text-shadow: none;
-    background: #b3d4fc;
-}
-
-@media print {
-    code[class*='language-'],
-    pre[class*='language-'] {
-        text-shadow: none;
-    }
-}
-
 /* Code blocks */
 pre[class*='language-'] {
     padding: var(--line-space);
     overflow: auto;
+    border-radius: 0.3em;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-    background: #f9f6f4;
+    background: var(--color-black);
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: slategray;
+    color: #8292a2;
 }
 
 .token.punctuation {
-    color: #999999;
+    color: #f8f8f2;
 }
 
 .token.namespace {
@@ -77,12 +54,15 @@ pre[class*='language-'] {
 
 .token.property,
 .token.tag,
-.token.boolean,
-.token.number,
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: #990055;
+    color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+    color: #ae81ff;
 }
 
 .token.selector,
@@ -91,35 +71,32 @@ pre[class*='language-'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #669900;
+    color: #a6e22e;
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string {
-    color: #9a6e3a;
-
-    /* This background color was intended by the author of this theme. */
-    background: hsla(0, 0%, 100%, 0.5);
+.style .token.string,
+.token.variable {
+    color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
-.token.keyword {
-    color: #0077aa;
-}
-
 .token.function,
 .token.class-name {
-    color: #dd4a68;
+    color: #e6db74;
+}
+
+.token.keyword {
+    color: #66d9ef;
 }
 
 .token.regex,
-.token.important,
-.token.variable {
-    color: #ee9900;
+.token.important {
+    color: #fd971f;
 }
 
 .token.important,
