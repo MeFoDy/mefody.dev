@@ -22,7 +22,7 @@ layout: page.njk
             </ul>
         {% endif %}
         <div class="article__share">
-            If you like the article, you can <a class="article__share-button" href="https://twitter.com/intent/tweet?text={{ title }} by @{{ site.twitter }}&url={{ site.paths.site }}{{ page.url }}" target="_blank">share it on Twitter</a>
+            If you like the article, you can <a class="article__share-button" href="https://twitter.com/intent/tweet?text={{ title }} by @{{ site.twitter }}&url={{ site.paths.site }}{{ page.url }}" target="_blank" rel="noopener">share it on Twitter</a>
         </div>
         {% set previousPost = collections.chunk | getPreviousCollectionItem(page) %}
         {% set nextPost = collections.chunk | getNextCollectionItem(page) %}

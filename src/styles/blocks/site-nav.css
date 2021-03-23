@@ -15,8 +15,7 @@
     display: block;
 }
 
-.site-nav__item a,
-.site-nav__item a:visited {
+.site-nav__item a {
     display: inline-block;
     padding: 0.25em 0;
     color: var(--color-black);
@@ -32,4 +31,10 @@
 .site-nav__item a:not([href]) {
     color: var(--color-lightgrey);
     text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .site-nav__item a {
+        padding: 1em 0;
+    }
 }
