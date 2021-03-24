@@ -8,7 +8,7 @@ code[class*='language-'],
 pre[class*='language-'] {
     color: #f8f8f2;
     font-size: 1em;
-    font-family: 'Fira Code', monospace;
+    font-family: var(--font-code);
     font-variant-ligatures: none;
     white-space: pre;
     text-align: left;

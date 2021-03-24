@@ -113,7 +113,7 @@
 .article code,
 .article kbd {
     padding: 0 0.3em;
-    font-family: 'Fira Code', monospace;
+    font-family: var(--font-code);
     word-break: break-word;
     background: var(--color-yellow-a3);
     border-radius: 5px;

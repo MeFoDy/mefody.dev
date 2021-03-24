@@ -9,9 +9,9 @@
 - [x] development favicon
 - [x] share (twitter)
 - [x] scroll-beahaviour
+- [x] fonts
 - [ ] content
 - [ ] favicon
-- [ ] fonts
 - [ ] open graph
 - [ ] manifest
 - [ ] service workers

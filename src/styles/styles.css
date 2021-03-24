@@ -26,6 +26,8 @@
     --main-column-width: 700px;
     --max-column-width: 1000px;
     --mobile-border-width: 15px;
+
+    --font-code: 'Fira Code', monospace;
 }
 
 /* Global styles */

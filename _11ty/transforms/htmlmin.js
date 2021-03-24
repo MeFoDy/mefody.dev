@@ -8,6 +8,7 @@ function htmlmin(content, outputPath) {
                 removeComments: true,
                 collapseWhitespace: true,
                 minifyJS: true,
+                minifyCSS: true,
             },
         );
         return result;
