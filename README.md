@@ -12,28 +12,25 @@
 - [x] fonts
 - [x] favicon
 - [x] manifest
+- [x] lazy loading
+- [x] svg placeholder for images
+- [x] avif support
+- [x] 100 lighthouse score
+- [x] headers for netlify
+- [x] convert video for web to av1 and h264
 - [ ] content
 - [ ] open graph
 - [ ] service workers
 - [ ] web mentions
-- [ ] 100 lighthouse score
 - [ ] styleguide
 - [ ] codepen embed
 - [ ] twitter embed lite
-- [ ] lazy loading
 - [ ] dark theme
 - [ ] cv
 - [ ] 11ty error-overlay
-- [ ] svg placeholder for images
-- [ ] avif support
 - [ ] CSP
-- [ ] json-ld
 - [ ] rss feed
 - [ ] jsonfeed
 - [ ] tests
-- [ ] gif to video
-- [ ] native share
-- [ ] headers for netlify
 - [ ] contributing
 - [ ] pagination
-- [ ] convert video for web as in https://evilmartians.com/chronicles/better-web-video-with-av1-codec

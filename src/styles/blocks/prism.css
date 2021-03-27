@@ -34,7 +34,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-    background: #fffcf6;
+    background: #fef9f3;
 }
 
 .token.comment,
@@ -68,7 +68,7 @@ pre[class*='language-'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #1e8712;
+    color: #138512;
 }
 
 .token.operator,
@@ -76,7 +76,7 @@ pre[class*='language-'] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #986d3a;
+    color: #ab5f06;
 }
 
 .token.atrule,

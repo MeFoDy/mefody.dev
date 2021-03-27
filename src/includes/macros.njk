@@ -1,3 +1,6 @@
-{% macro video(src, width, height, muted = true) %}<video src="{{ src }}" width="{{ width }}" height="{{ height }}" controls {{ "muted" if muted }} playsinline preload="metadata"></video>{% endmacro %}
+{% macro video(src, width, height, muted = true) %}<video width="{{ width }}" height="{{ height }}" controls {{ "muted" if muted }} playsinline preload="metadata">
+    <source src="{{ src }}.av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
+    <source src="{{ src }}.h264.mp4" type="video/mp4">
+</video>{% endmacro %}
 
 {% macro img(src, alt = '') %}<img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async">{% endmacro %}
