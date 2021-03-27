@@ -10,10 +10,10 @@
 - [x] share (twitter)
 - [x] scroll-beahaviour
 - [x] fonts
+- [x] favicon
+- [x] manifest
 - [ ] content
-- [ ] favicon
 - [ ] open graph
-- [ ] manifest
 - [ ] service workers
 - [ ] web mentions
 - [ ] 100 lighthouse score

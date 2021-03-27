@@ -1,0 +1,30 @@
+{
+    "short_name": "Dev Tips",
+    "name": "Dev Tips from @dark_mefody",
+    "lang": "en",
+    "start_url": "/",
+    "scope": "/",
+    "display": "minimal-ui",
+    "orientation": "any",
+    "description": "Short dev tips about everyday routine from @dark_mefody",
+    "theme_color": "#ffcc00",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "images/favicon/logo-tips-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/favicon/logo-tips-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "images/favicon/maskable_icon_x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
+    ]
+}

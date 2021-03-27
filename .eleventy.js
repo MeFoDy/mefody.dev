@@ -1,8 +1,8 @@
 const fs = require('fs');
 
 module.exports = function(config) {
-    // config.addPassthroughCopy('src/favicon.ico');
-    config.addPassthroughCopy('src/manifest.json');
+    config.addPassthroughCopy({'src/images/favicon/favicon.ico': 'favicon.ico'});
+    config.addPassthroughCopy('src/manifest.webmanifest');
     config.addPassthroughCopy('src/fonts/*.woff2');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
@@ -129,6 +129,7 @@ module.exports = function(config) {
         templateFormats: ['njk', 'md'],
         trim: true,
     });
+    config.addPlugin(require('@hirusi/eleventy-plugin-safe-external-links'));
 
     return {
         dir: {

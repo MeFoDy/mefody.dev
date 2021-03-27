@@ -61,7 +61,7 @@ gulp.task('cache:hash', () => {
         `${PUBLIC_PATH}/images/**/*.{svg,png,jpg}`,
         `${PUBLIC_PATH}/scripts/*.js`,
         `${PUBLIC_PATH}/styles/*.css`,
-        `${PUBLIC_PATH}/manifest.json`,
+        `${PUBLIC_PATH}/manifest.webmanifest`,
     ], {
         base: PUBLIC_PATH
     })
@@ -75,7 +75,7 @@ gulp.task('cache:hash', () => {
 gulp.task('cache:replace', () => {
     return gulp
         .src([
-            `${PUBLIC_PATH}/**/*.{html,css}`, `${PUBLIC_PATH}/manifest-*.json`,
+            `${PUBLIC_PATH}/**/*.{html,css}`, `${PUBLIC_PATH}/manifest-*.webmanifest`,
         ])
         .pipe(revRewrite({
             manifest: gulp.src(`${PUBLIC_PATH}/rev.json`)
