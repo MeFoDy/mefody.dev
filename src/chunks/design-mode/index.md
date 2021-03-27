@@ -17,7 +17,7 @@ Sometimes I need to take a screenshot of a page with some text changed. Of�
 You can set `document.designMode` to `'on'` and your page becomes editable. See it in action.
 
 <figure >
-    {{ macros.video('./images/designmode.h264.mp4') }}
+    {{ macros.video('./images/designmode.h264.mp4', 1209, 662) }}
     <figcaption>
         Type <code>document.designMode = 'on'</code> in DevTools Console and you can start editing the page content like in MS Word.
     </figcaption>
