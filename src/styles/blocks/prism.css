@@ -26,29 +26,6 @@ pre[class*='language-'] {
     background: none;
 }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-    text-shadow: none;
-    background: #b3d4fc;
-}
-
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
-    text-shadow: none;
-    background: #b3d4fc;
-}
-
-@media print {
-    code[class*='language-'],
-    pre[class*='language-'] {
-        text-shadow: none;
-    }
-}
-
 /* Code blocks */
 pre[class*='language-'] {
     padding: var(--line-space);
@@ -57,7 +34,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-    background: #f9f6f4;
+    background: #fffcf6;
 }
 
 .token.comment,
@@ -91,7 +68,7 @@ pre[class*='language-'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #669900;
+    color: #1e8712;
 }
 
 .token.operator,
@@ -99,10 +76,7 @@ pre[class*='language-'] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #9a6e3a;
-
-    /* This background color was intended by the author of this theme. */
-    background: hsla(0, 0%, 100%, 0.5);
+    color: #986d3a;
 }
 
 .token.atrule,
@@ -113,13 +87,13 @@ pre[class*='language-'] {
 
 .token.function,
 .token.class-name {
-    color: #dd4a68;
+    color: #c333a4;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-    color: #ee9900;
+    color: #e60101;
 }
 
 .token.important,
