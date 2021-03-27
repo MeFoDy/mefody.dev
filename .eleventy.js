@@ -6,7 +6,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/fonts/*.woff2');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|ico|svg|mp4|xml)');
+    config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
 
     // Collections
 
@@ -125,11 +125,15 @@ module.exports = function(config) {
     // Plugins
 
     config.addPlugin(require('eleventy-plugin-reading-time'));
+
     config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
         templateFormats: ['njk', 'md'],
         trim: true,
     });
+
     config.addPlugin(require('@hirusi/eleventy-plugin-safe-external-links'));
+
+    config.addPlugin(require('./_11ty/plugins/img-prepare.js'));
 
     return {
         dir: {

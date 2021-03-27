@@ -90,6 +90,7 @@
     }
 
     .article figcaption {
+        max-width: none;
         padding-right: 0;
     }
 
@@ -105,6 +106,7 @@
 }
 
 .article img {
+    display: inline-block;
     max-width: 100%;
     height: auto;
     box-shadow: 0 0 1px 0 var(--color-black);
