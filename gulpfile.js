@@ -6,6 +6,7 @@ const del = require('del');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const paths = require('vinyl-paths');
+const workboxBuild = require('workbox-build');
 
 const PUBLIC_PATH = '_public';
 
@@ -83,6 +84,30 @@ gulp.task('cache:replace', () => {
         .pipe(gulp.dest(PUBLIC_PATH));
 });
 
+gulp.task('service-worker', () => {
+    return workboxBuild.generateSW({
+        globDirectory: PUBLIC_PATH,
+        globPatterns: [
+            '**/*.{html,js,css,webmanifest,ico,woff2}',
+        ],
+        swDest: `${PUBLIC_PATH}/sw.js`,
+        runtimeCaching: [{
+            urlPattern: /\.(?:png|jpg|avif|svg)$/,
+            handler: 'CacheFirst',
+            options: {
+                cacheName: 'images',
+                expiration: {
+                    maxEntries: 30,
+                },
+            },
+        }],
+        mode: 'production',
+        skipWaiting: true,
+        clientsClaim: true,
+        sourcemap: false,
+    });
+});
+
 gulp.task('cache', gulp.series(
     'cache:hash',
     'cache:replace',
@@ -96,4 +121,5 @@ gulp.task('build', gulp.series(
     'scripts',
     'clean',
     'cache',
+    'service-worker',
 ));

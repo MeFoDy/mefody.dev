@@ -21,9 +21,9 @@
 - [x] content
 - [x] open graph
 - [x] talks + redirects to github pages
-- [ ] rss feed
+- [x] rss feed
+- [x] service workers
 - [ ] jsonfeed
-- [ ] service workers
 
 - [ ] about
 - [ ] web mentions
