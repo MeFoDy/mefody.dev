@@ -138,6 +138,7 @@
 
 .article pre code {
     padding: 0;
+    word-break: break-all;
     background: none;
 }
 
