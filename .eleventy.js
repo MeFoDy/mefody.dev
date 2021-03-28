@@ -72,9 +72,44 @@ module.exports = function(config) {
         return array.filter(tag => tag !== 'chunk');
     });
 
+    config.addFilter('prepareTalks', (data) => {
+        const talks = data.talks;
+
+        talks.forEach(talk => {
+            let lastDate = new Date('1970-01-01');
+
+            talk.versions.forEach(version => {
+                version.dateObj = new Date(version.date);
+
+                if (version.dateObj.getTime() > lastDate.getTime()) {
+                    lastDate = version.dateObj;
+                }
+
+                version.slidesLink = version.slides.startsWith('https:')
+                    ? version.slides
+                    : data.pathPrefix + version.slides;
+
+            });
+
+            talk.date = lastDate;
+        });
+
+        return talks.sort((a, b) => a.date.getTime() - b.date.getTime());
+    });
+
+    config.addFilter('preparePodcasts', (data) => {
+        const podcasts = data.podcasts;
+
+        podcasts.forEach(podcast => {
+            podcast.dateObj = new Date(podcast.date);
+        });
+
+        return podcasts.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
+    });
+
     config.addFilter('fixLinks', (content) => {
         const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
-        const prefix = 'https://tips.mefody.dev' + content.url;
+        const prefix = 'https://mefody.dev' + content.url;
         return content.templateContent.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
                 match = match.slice(0, -1);

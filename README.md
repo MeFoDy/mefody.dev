@@ -20,11 +20,12 @@
 - [x] convert video for web to av1 and h264
 - [x] content
 - [x] open graph
-- [ ] about
+- [x] talks + redirects to github pages
 - [ ] rss feed
 - [ ] jsonfeed
 - [ ] service workers
 
+- [ ] about
 - [ ] web mentions
 - [ ] styleguide
 - [ ] codepen embed

@@ -1,6 +1,6 @@
 ---
-title: Easy video converting for web
-description: Using bash to make video converting comfortable.
+title: Easy video converting for the web
+description: Using of Bash to make video converting more comfortable.
 cover: images/cover.png
 date: 2021-03-28
 dateUpdated: Last Modified
@@ -23,7 +23,7 @@ Andrey Sitnik wrote a [great article](https://evilmartians.com/chronicles/better
 </video>
 ```
 
-This snippet works great in modern Chrome and Firefox with AV1-codec supported, falling back to bulletproof H264-codec for other browsers.
+This snippet works great in modern Chrome and Firefox [with AV1-codec supported](https://caniuse.com/av1), falling back to bulletproof H264-codec for other browsers.
 
 ## ffmpeg
 

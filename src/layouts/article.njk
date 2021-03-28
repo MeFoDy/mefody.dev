@@ -6,8 +6,8 @@ layout: page.njk
         <h1 class="article__title">{{ title }}</h1>
         <div class="article__meta">
             <time class="article__datetime" datetime="{{ page.date.toISOString() }}">{{ page.date | readableDate }}</time>
-            <div class="article__minutes-to-read">{{ content | readingTime }} to read</div>
-            <a href="https://github.com/MeFoDy/tips.mefody.dev/blob/main/{{ page.inputPath }}" class="article__github">Edit this page on GitHub</a>
+            <div class="article__minutes-to-read">{{ content | readingTime({speed: 200}) }} to read</div>
+            <a href="https://github.com/MeFoDy/mefody.dev/blob/main/{{ page.inputPath }}" class="article__github">Edit this page on GitHub</a>
         </div>
     </div>
     {{ content | safe }}

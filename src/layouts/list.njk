@@ -9,14 +9,14 @@ layout: page.njk
         </p>
     </div>
     <ul class="collection__list">
-        {%- for item in collections.withTags | filterCollection(tag) -%}
+        {%- for item in collections.withTags | filterCollection(tag) | reverse -%}
             <li class="collection__item">
                 <a href="{{ item.url }}" class="collection__item-link">
                     <h2 class="collection__item-title">{{ item.data.title }}</h2>
                 </a>
                 <div class="collection__item-meta">
                     <time class="collection__item-datetime" datetime="{{ item.date.toISOString() }}">{{ item.date | readableDate }}</time>
-                    <div class="collection__item-minutes-to-read">{{ item.templateContent | readingTime }} to read</div>
+                    <div class="collection__item-minutes-to-read">{{ item.templateContent | readingTime({speed: 200}) }} to read</div>
                     <div class="collection__item-tags tags">
                         {%- for tag in item.data.tags | filterTags -%}
                             <span class="tags__item">

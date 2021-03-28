@@ -1,0 +1,64 @@
+---
+layout: page.njk
+---
+<div class="talks">
+    <div class="talks__head">
+        <h1 class="talks__title">{{ title }}</h1>
+        <p class="talks__description">
+            {{ description }}
+        </p>
+    </div>
+    <div class="talks__section">
+        <h2>Conferences and meetups</h2>
+        <ul class="talks__list">
+            {%- for item in talks | prepareTalks | reverse -%}
+                <li class="talks__talk" lang="ru">
+                    <h3 class="talks__talk-title">{{ item.title }}</h3>
+                    <p class="talks__talk-description">{{ item.description }}</p>
+                    <ul class="talks__talk-versions">
+                        {%- for version in item.versions -%}
+                            <li class="talks__talk-version">
+                                <div class="talks__talk-conf">
+                                    <time class="talks__datetime" datetime="{{ version.date }}">{{ version.dateObj | readableDate }}</time>
+                                    @
+                                    {% if version.conferenceLink %}
+                                        <a href="{{ version.conferenceLink }}" class="talks__conference" target="_blank" rel="noopener">{{ version.conference }}</a>
+                                    {% else %}
+                                        <span class="talks__conference">{{ version.conference }}</span>
+                                    {% endif %}
+                                    <span class="talks__language">{{ version.language }}</span>
+                                </div>
+                                <div class="talks__talk-links">
+                                    <span><a href="{{ version.slidesLink }}" target="_blank" rel="noopener" class="talks__slides">View slides</a></span>
+
+                                    {% if version.video %}
+                                        <span><a href="{{ version.video }}" target="_blank" rel="noopener" class="talks__video">Watch video</a></span>
+                                    {% endif %}
+
+                                    {% if version.transcription %}
+                                        <span><a href="{{ version.transcription }}" target="_blank" rel="noopener" class="talks__transcription">Read transcription</a></span>
+                                    {% endif %}
+                                </div>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+
+    <div class="talks__section">
+        <h2>Podcasts</h2>
+        <ul class="talks__list">
+            {%- for item in talks | preparePodcasts | reverse -%}
+                <li class="talks__talk" lang="ru">
+                    <h3 class="talks__talk-title"><a href="{{ item.podcastLink }}" rel="noopener" target="_blank">{{ item.name }}</a></h3>
+                    <div class="talks__talk-podcast">
+                        <time class="talks__datetime" datetime="{{ item.date }}">{{ item.dateObj | readableDate }}</time>
+                        <span class="talks__language">{{ item.lang }}</span>
+                    </div>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>

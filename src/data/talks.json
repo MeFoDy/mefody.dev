@@ -1,0 +1,505 @@
+{
+  "pathPrefix": "https://mefody.github.io/talks/",
+  "talks": [
+    {
+      "title": "Houdini — великий разоблачитель",
+      "description": "Пока JavaScript-разработчики вовсю используют Babel и полифилы для внедрения новых возможностей языка, адепты CSS вынуждены ждать поддержки полезных свойств хотя бы вечнозелеными браузерами. Но всего один «рыцарь на белом коне» может все исправить. Знакомьтесь, CSS Houdini.",
+      "versions": [
+        {
+          "slides": "houdini-magic/",
+          "conference": "Web Standards Days 2017 in Minsk",
+          "conferenceLink": "https://wsd.events/2017/10/21/",
+          "date": "2017-10-21",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=4kr5K-nWG3Y"
+        }
+      ]
+    },
+    {
+      "title": "Распечатай мне курсач. На CSS",
+      "description": "В некоторых университетах принято смотреть не на суть работы, а на то, как качественно она оформлена по ГОСТам. Почему бы не применить всю мощь CSS Paged Media Module и больше не думать над отступами?",
+      "versions": [
+        {
+          "slides": "print-with-css/",
+          "conference": "MinskCSS Meetup #3",
+          "conferenceLink": "https://minskcss.timepad.ru/event/604963/",
+          "date": "2017-12-07",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=tygiat10a3A"
+        },
+        {
+          "slides": "print-with-css/",
+          "conference": "Web Standards Days 2018 in Moscow",
+          "conferenceLink": "https://wsd.events/2018/02/03/",
+          "date": "2018-02-03",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=xVPCZFBpjsI"
+        }
+      ]
+    },
+    {
+      "title": "JS Decorators — приоденьте свой код",
+      "description": "Во многих языках программирования есть возможность изменять поведение метода без вмешательства в его код: в C# — атрибуты, в Java — аннотации, в Python — декораторы. Появление декораторов в JavaScript было запланировано еще в стандарте ES2016, но что-то пошло не так. Какие есть реализации стандарта, как его использовать уже сейчас и зачем Тони Старку J.A.R.V.I.S. — постараемся разобраться в докладе.",
+      "versions": [
+        {
+          "slides": "js-decorators/",
+          "conference": "MinskJS Meetup #3",
+          "conferenceLink": "https://minskjs.timepad.ru/event/606146/",
+          "date": "2018-01-25",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=VfF7GyNItps"
+        }
+      ]
+    },
+    {
+      "title": "Полный Spectre уязвимостей",
+      "description": "Новый год в IT начался с разделения мира на «до» и «после». Кто-то бросается покупать процессоры, не подверженные Meltdown и Spectre. Кто-то утверждает, что ничего не изменилось. А кто-то слышал названия уязвимостей, но так и не разобрался, в чем их суть. Наши тайные агенты объяснят вам доступным языком, откуда «хайп» и что нужно знать фронтэнд-разработчикам, чтобы их сайты не майнили биткоины без их ведома.",
+      "versions": [
+        {
+          "slides": "spectre-panel-discussion/",
+          "conference": "MinskJS Meetup #3",
+          "conferenceLink": "https://minskjs.timepad.ru/event/606146/",
+          "date": "2018-01-25",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=hGzy17Nnc38"
+        }
+      ]
+    },
+    {
+      "title": "Магия CSS вне Хогвартса",
+      "description": "«Играться со шрифтами» и двигать однотипные блоки на одинаковых страницах рано или поздно надоедает. Чтобы не погрязнуть в рутине, нужно давать себе встряску. Как? Создавать крутые демки! Ещё лучше — с попаданием на главную страницу CodePen.",
+      "versions": [
+        {
+          "slides": "css-magic/",
+          "conference": "MinskCSS Meetup #4",
+          "conferenceLink": "https://minskcss.timepad.ru/event/606207/",
+          "date": "2018-03-22",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=Dhd6FSYZoiQ"
+        },
+        {
+          "slides": "css-magic/wsd.html",
+          "conference": "Web Standards Days 2018 in Saint-Petersburg",
+          "conferenceLink": "https://wsd.events/2018/08/18/",
+          "date": "2018-08-18",
+          "language": "ru",
+          "video": "https://youtu.be/7FuUrWVJGNc"
+        }
+      ]
+    },
+    {
+      "title": "Показываем картинки пользователю: подробное руководство",
+      "description": "Веб-разработчики постоянно работают с изображениями, будь то графика, заложенная в дизайн сайта, или фотографии, загружаемые на сайт извне. При этом одно неоптимизированное изображение может полностью убить старания разработчиков сделать сайт максимально быстрым для загрузки. Давайте попробуем найти тот самый «идеальный» способ доставки изображений пользователям, попутно автоматизировав все возможные шаги к достижению этой цели.",
+      "versions": [
+        {
+          "slides": "images-delivery/",
+          "conference": "FrontendConf 2018",
+          "conferenceLink": "https://frontendconf.ru/moscow-rit/2018/abstracts",
+          "date": "2018-05-28",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=EwBYOQwPEpY"
+        },
+        {
+          "slides": "images-delivery/index_itechforum.html",
+          "conference": "iTechForum 2018",
+          "conferenceLink": "https://events.itechart.by/itechforum-2018/",
+          "date": "2018-06-16",
+          "language": "ru",
+          "video": "https://youtu.be/18MbaJGExzQ"
+        }
+      ]
+    },
+    {
+      "title": "Еще не готовил доклад? Чего ждешь?",
+      "versions": [
+        {
+          "slides": "https://mefody.github.io/talks/wait-for-talk/",
+          "conference": "BeerJS Summit Minsk 2018",
+          "conferenceLink": "https://teletype.in/@beerjssummit/rJwpSTnzX",
+          "date": "2018-06-30",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Подготовка к выступлению. Пошаговое руководство от организаторов",
+      "description": "Talking to a public is not an easy thing to learn, and it takes a lot of courage and time to become experienced with and to feel comfortable on a stage. There is always a fear of failing. Is the topic right? Do your slides help you or draw too much attention? Are they informative? Does your voice sound reasonable and confident? What should you do before the event? When it's better to force yourself to finish preparations? Is it OK to make changes to your slides in 5 minutes before the talk?",
+      "versions": [
+        {
+          "slides": "talk-preparation/",
+          "conference": "OdessaJS 2018",
+          "conferenceLink": "http://old.odessajs.org/2018/index.html",
+          "date": "2018-07-06",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=nsaF4VFnCz0"
+        }
+      ]
+    },
+    {
+      "title": "Houdini — CSS, который JavaScript",
+      "description": "CSS Houdini — набор спецификаций, который изменит веб-разработку. С его внедрением в браузеры обычный верстальщик будет вынужден выучить JavaScript, чтобы оставаться востребованным. Зато вместо того, чтобы дожидаться появления браузерной реализации «супер-мега-гридов», достаточно будет подключить полифил для CSS. Мы немного пофантазируем и рассмотрим все существующие спецификации Houdini.",
+      "versions": [
+        {
+          "slides": "houdini-css/",
+          "conference": "OdessaJS 2018",
+          "conferenceLink": "http://old.odessajs.org/2018/index.html",
+          "date": "2018-07-07",
+          "language": "ru",
+          "video": "https://youtu.be/MPaD8N9BrFA"
+        },
+        {
+          "slides": "houdini-css/ft.html",
+          "conference": "FrontTalks 2018",
+          "conferenceLink": "https://yandex.ru/promo/events/generated/fronttalks/2018/index",
+          "date": "2018-09-14",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=yyVU-r9sRw8"
+        },
+        {
+          "slides": "houdini-css/kharkivcss.html",
+          "conference": "KharkivCSS 2019",
+          "conferenceLink": "https://kharkivcss.org/2019/",
+          "date": "2019-04-20",
+          "language": "ru",
+          "video": "https://youtu.be/xFXCfTHTmoA"
+        }
+      ]
+    },
+    {
+      "title": "Идеальный доклад. Голая правда",
+      "description": "Что делает доклад интересным и запоминающимся? Полезная тема, харизматичный спикер, весёлые гифки на слайдах? Да, но список требований гораздо шире. Может показаться, что готовить доклады сложно. К тому же непонятно, зачем это нужно лично вам. Плюсы и минусы выступлений для карьеры и личностного роста, как подготовить тот самый, «идеальный» доклад — от опытных докладчиков и организаторов конференций и митапов.",
+      "versions": [
+        {
+          "slides": "talk-preparation/wsd.html",
+          "conference": "Web Standards Days 2018 in Saint-Petersburg",
+          "conferenceLink": "https://wsd.events/2018/08/18/",
+          "date": "2018-08-18",
+          "language": "ru",
+          "video": "https://youtu.be/mpHeJYYqA90"
+        },
+        {
+          "slides": "talk-preparation/kiev.html",
+          "conference": "Web Standards Days 2018 in Kiev",
+          "conferenceLink": "https://wsd.events/2018/10/27/",
+          "date": "2018-10-27",
+          "language": "ru",
+          "video": "https://youtu.be/_VSb2SqW9WE"
+        }
+      ]
+    },
+    {
+      "title": "Отладка CSS в боевых условиях",
+      "description": "Бывало ли у вас, что нужно срочно подвинуть кнопочку в интерфейсе, а ваши стили не применяются? Или когда у вас всё работает, а на конкретном мобильном устройстве вёрстка плывёт? Как дебажить CSS в таком случае? И как понять, что виноват именно CSS, а не ваш новомодный Webpack 7 со встроенным CSSMegaMinifier?",
+      "versions": [
+        {
+          "slides": "css-debug/",
+          "conference": "Web Standards Days 2018 in Minsk",
+          "conferenceLink": "https://wsd.events/2018/12/01/",
+          "date": "2018-12-01",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=bHv9pWEzKiU"
+        }
+      ]
+    },
+    {
+      "title": "MacOS Driven Development",
+      "description": "Я пишу код в уютной для меня MacOS уже 6 лет. Чёткие картинки, насыщенные цвета на Retina-экране, удобные инструменты, среди которых Sketch — разрабатывать так приятно! Парадокс в том, что люди, которые пользуются продуктами, для которых я пишу код, в большинстве своём пользуются Windows. Поэтому баги, специфичные для Windows, очень легко могут пройти мимо разработчика. Чёрт с ними, с багами — крестик у попапа ведь должен быть слева! Или всё же справа?",
+      "versions": [
+        {
+          "slides": "mdd/",
+          "conference": "moscowcss №11",
+          "conferenceLink": "https://moscowcss.timepad.ru/event/922360/",
+          "date": "2019-03-25",
+          "language": "ru",
+          "video": "https://youtu.be/w39AWcIMbZ4"
+        },
+        {
+          "slides": "mdd/",
+          "conference": "pitercss_meetup 30",
+          "conferenceLink": "https://medium.com/pitercss-meetup/30-8c1630621e4e",
+          "date": "2019-03-27",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Тёмная сторона веба",
+      "description": "Тёмные темы сайтов можно признать новым трендом в дизайне веб-приложений. Иногда они уместны, иногда — необходимы. Случается, что они служат скорее во вред пользователям, чем для пользы. Давайте разберёмся, когда и как тёмные темы могут помочь стать вашему веб-приложению лучше.",
+      "versions": [
+        {
+          "slides": "dark-themes/",
+          "conference": "Web Standards Days 2019 in Moscow",
+          "conferenceLink": "https://wsd.events/2019/04/13/",
+          "date": "2019-04-13",
+          "language": "ru",
+          "video": "https://youtu.be/inJbZ1WFfQA"
+        }
+      ]
+    },
+    {
+      "title": "Алиса, пойдём во фронтенд!",
+      "description": "Голосовые помощники — уже не далёкое будущее, а реальная действительность. Алекса, Сири, Алиса и прочие встроенные в «умные» колонки боты постепенно меняют наш способ взаимодействия с приложениями. Давайте посмотрим на примере понимающей русский язык Алисы, как можно применять её навыки для ваших сайтов прямо сейчас. Построим простой навык прямо во время доклада. Рассмотрим, что уже сейчас могут дать голосовые помощники, чтобы привнести что-то новое и полезное в веб.",
+      "versions": [
+        {
+          "slides": "alisa/",
+          "conference": "FrontendConf 2019",
+          "conferenceLink": "https://ritfest.ru/2019",
+          "date": "2019-05-27",
+          "language": "ru",
+          "video": "https://youtu.be/yjTH8-O3CMA",
+          "transcription": "https://habr.com/ru/company/oleg-bunin/blog/468545/"
+        }
+      ]
+    },
+    {
+      "title": "Soft Skills для интровертов",
+      "description": "Чтобы быть успешным разработчиком, одних навыков программирования в 2019 году недостаточно. Кроме знаний технологий, нужно развивать коммуникабельность, тайм-менеджмент, лидерские качества и много всего другого. Но что делать, если вы заядлый интроверт и хотите писать только код?",
+      "versions": [
+        {
+          "slides": "introvert-soft-skills/",
+          "conference": "Мастер-класс",
+          "conferenceLink": "https://medium.com/web-standards/soft-skills-introvert-39a4a3cb5a58",
+          "date": "2019-07-11",
+          "language": "ru",
+          "video": "https://youtu.be/UE9aGHgqQc0"
+        }
+      ]
+    },
+    {
+      "title": "Анимации в вебе",
+      "description": "В 2020 году для хорошего UX использование анимаций на сайтах — почти стандарт. При этом способов «одушевить» интерфейс — вагон и маленькая тележка. Давайте рассмотрим самые популярные и выберем, когда какой способ подходит лучше.",
+      "versions": [
+        {
+          "slides": "web-animations/",
+          "conference": "undefined@ in Yandex",
+          "date": "2019-08-20",
+          "language": "ru"
+        },
+        {
+          "slides": "web-animations/",
+          "conference": "Storm The Front Meetup 7 in Homel",
+          "conferenceLink": "https://community-z.com/events/stormthefront-meetup-7",
+          "date": "2020-01-25",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=IjMmdAk7DZ8"
+        }
+      ]
+    },
+    {
+      "title": "CSS — язык программирования",
+      "description": "В Интернетах принято ругать CSS, если не понимаешь, как с ним работать. Тем не менее, CSS в связке с HTML — Тьюринг-полный язык программирования, а если к ним добавить Houdini API и CSS Custom Properties — можно творить настояющую магию.",
+      "versions": [
+        {
+          "slides": "css-programming/",
+          "conference": "Krasnodar Dev Conf 2019",
+          "conferenceLink": "https://krd.dev/events/14",
+          "date": "2019-08-25",
+          "language": "ru",
+          "video": "https://youtu.be/fPkqobI0C10"
+        },
+        {
+          "slides": "css-programming/stachka.html",
+          "conference": "Стачка 2019",
+          "conferenceLink": "https://nastachku.ru/archive/2019_innopolis/index.php",
+          "date": "2019-10-12",
+          "language": "ru"
+        },
+        {
+          "slides": "css-programming/fc.html",
+          "conference": "FrontendConf 2019",
+          "conferenceLink": "https://frontendconf.ru/moscow/2019",
+          "date": "2019-10-14",
+          "language": "ru",
+          "video": "https://youtu.be/2UIwHWQeJBs"
+        },
+        {
+          "slides": "css-programming/lviv.html",
+          "conference": "LvivCSS’2019",
+          "conferenceLink": "https://lvivcss.live/",
+          "date": "2019-11-02",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "<a>",
+      "description": "Что такое поисковая выдача? По факту — страница с десятками ссылок. Когда тег <⁣a⁣> — самое ценное, что нужно отдать пользователю, знать его особенности критически важно. Давайте разберёмся, какие тайны в себе хранит этот тег, который с нами ещё со стандарта HTML 1.",
+      "versions": [
+        {
+          "slides": "a/",
+          "conference": "Юбилейный Я.Субботник 2019 в Москве",
+          "conferenceLink": "https://events.yandex.ru/events/yasubbotnik/26-oct-2019",
+          "date": "2019-10-26",
+          "language": "ru",
+          "video": "https://youtu.be/CKbOHn1lJWw?t=13808"
+        },
+        {
+          "slides": "a/wsd.html",
+          "conference": "Web Standards Days 2019 in Minsk",
+          "conferenceLink": "https://wsd.events/2019/12/07/",
+          "date": "2019-12-07",
+          "language": "ru",
+          "video": "https://youtu.be/_UmMLsIeK9k"
+        }
+      ]
+    },
+    {
+      "title": "Трогательная вёрстка",
+      "description": "В марте Apple обновила iPadOS и добавила в него курсор мышки. Но мы привыкли к тому, что планшет — это тач-устройство, для которого можно верстать, не думая об указателях. Попробуем разобраться, нужно ли верстать отдельно под тач-устройства и какие преимущества может дать нам знание, что сайт показывается не на мониторе.",
+      "versions": [
+        {
+          "slides": "css-for-touch/",
+          "conference": "MinskCSS Meetup #8",
+          "conferenceLink": "https://minskcss.timepad.ru/event/1289579/",
+          "date": "2020-04-08",
+          "language": "ru",
+          "video": "https://youtu.be/BRbR0wXhO38?t=8155"
+        }
+      ]
+    },
+    {
+      "title": "Дорогая цена стилей",
+      "description": "Загрузка CSS на страницу — блокирующая операция. Если асинхронная загрузка JavaScript может быть незаметна пользователю, то медленное появление стилей может прогнать нетерпеливого пользователя с сайта. Как загружать CSS максимально производительно и незаметно для пользователей? Попробуем разобраться.",
+      "versions": [
+        {
+          "slides": "css-cost/",
+          "conference": "Я.Субботник по разработке интерфейсов",
+          "conferenceLink": "https://yandex.ru/promo/events/generated/yasubbotnik/25-apr-2020/index",
+          "date": "2020-04-25",
+          "language": "ru",
+          "video": "https://youtu.be/kATRlMrtaaY",
+          "transcription": "https://habr.com/ru/company/yandex/blog/501998/"
+        }
+      ]
+    },
+    {
+      "title": "Трогательный фронтенд",
+      "description": "В марте Apple обновила iPadOS и добавила в него курсор мышки. Но мы привыкли к тому, что планшет — это тач-устройство, для которого можно верстать, не думая об указателях. Попробуем разобраться, нужно ли верстать отдельно под тач-устройства, и какие преимущества может дать нам знание, что сайт показывается не на мониторе.",
+      "versions": [
+        {
+          "slides": "frontend-for-touch/",
+          "conference": "РИТ++ 2020",
+          "conferenceLink": "https://ritfest.ru/2020",
+          "date": "2020-05-26",
+          "language": "ru",
+          "video": "https://youtu.be/Yv_a8gFVbeM"
+        }
+      ]
+    },
+    {
+      "title": "WWW-аппликация",
+      "description": "Чтобы нарисовать веб-страничку, браузер под капотом задействует целый конвейер рендеринга, в котором каждый этап — важный и сложный. Как разработчик может влиять на эти этапы, чтобы сделать страничку лучше и производительней? Давайте вспомним аппликации из бумаги, которые вы, возможно, делали в начальной школе. Оказывается, у рендеринга и детских аппликаций есть много общего.",
+      "versions": [
+        {
+          "slides": "https://drive.google.com/file/d/1lQKL2ru7fPJXDCiHCjgtbczAcLzV6FCL/view",
+          "conference": "Frontend Live 2020",
+          "conferenceLink": "https://frontendconf.ru/moscow/2020/abstracts/7171",
+          "date": "2020-10-01",
+          "language": "ru",
+          "video": "https://youtu.be/__o3EHC9nZQ"
+        },
+        {
+          "slides": "https://drive.google.com/file/d/1lQKL2ru7fPJXDCiHCjgtbczAcLzV6FCL/view",
+          "conference": "Neat Talks #4",
+          "date": "2020-10-15",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "<img>",
+      "description": "«Просто добавь картинку на сайт», — говорили они. А оказалось, что «просто» не значит «правильно». Давайте разберёмся, как эффективно добавлять изображения на страницу, какие форматы графики для каких случаев полезны и как автоматизировать автоматизируемое.",
+      "versions": [
+        {
+          "slides": "img/",
+          "conference": "DevFest by GDG Russia 2020",
+          "conferenceLink": "https://gdg-russia.com/#!/tab/235456433-2",
+          "date": "2020-10-17",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=WfzKd16LplI"
+        }
+      ]
+    },
+    {
+      "title": "Speakerpunk 2021",
+      "description": "О том, как подготовить и рассказать доклад на техническую тему, когда на дворе онлайн, но иногда пускают и в оффлайн: личный опыт, наблюдения, советы, лайфхаки и истории (не)успеха.",
+      "versions": [
+        {
+          "slides": "speakerpunk-2021/",
+          "conference": "Women Developer Academy by Google",
+          "conferenceLink": "https://habr.com/ru/company/google/blog/545184/",
+          "date": "2021-02-16",
+          "language": "ru"
+        }
+      ]
+    }
+  ],
+  "podcasts": [
+    {
+      "name": "На митап! #6 — Путь разработчика, зачем наставничать",
+      "podcastLink": "https://youtu.be/ds-8TstM8Js",
+      "date": "2019-07-07",
+      "lang": "ru"
+    },
+    {
+      "name": "Веб-стандарты №134. DOM, атрибуты для картинок, веб-компоненты в Firefox, новости из леса, хорошая конференция",
+      "podcastLink": "https://www.youtube.com/watch?v=jtIi6ryOFBE",
+      "date": "2018-08-20",
+      "lang": "ru"
+    },
+    {
+      "name": "SPB Frontend. Drinkcast #28 — «Спикерский»",
+      "podcastLink": "https://spb-frontend.ru/podcast/28",
+      "date": "2018-09-18",
+      "lang": "ru"
+    },
+    {
+      "name": "Frontend Weekend #75 – Никита Дубко о том, как за год стремительно прокачать свою карьеру frontend-разработчика",
+      "podcastLink": "https://podcasts.apple.com/ru/podcast/75-%D0%BD%D0%B8%D0%BA%D0%B8%D1%82%D0%B0-%D0%B4%D1%83%D0%B1%D0%BA%D0%BE-%D0%BE-%D1%82%D0%BE%D0%BC-%D0%BA%D0%B0%D0%BA-%D0%B7%D0%B0-%D0%B3%D0%BE%D0%B4-%D1%81%D1%82%D1%80%D0%B5%D0%BC%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C/id1233996390?i=1000488506587",
+      "date": "2018-10-21",
+      "lang": "ru"
+    },
+    {
+      "name": "Frontend Weekend #90 – По следам Web Standards Days в Москве с Александрой Шинкевич и Никитой Дубко",
+      "podcastLink": "https://podcasts.apple.com/ru/podcast/90-%D0%BF%D0%BE-%D1%81%D0%BB%D0%B5%D0%B4%D0%B0%D0%BC-web-standards-days-%D0%B2-%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5-%D1%81-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B9/id1233996390?i=1000488506505",
+      "date": "2019-05-06",
+      "lang": "ru"
+    },
+    {
+      "name": "Веб-стандарты №185. На утро после BeerJS Summit, альтернативные форматы, дружба народов",
+      "podcastLink": "https://medium.com/web-standards/episode-185-14e5fcfde7e6",
+      "date": "2019-07-22",
+      "lang": "ru"
+    },
+    {
+      "name": "Веб-стандарты №189. MathML, ленивые картинки, CSS-модули, БЭМ или CSS-in-JS, приватность, CSS-Minsk-JS",
+      "podcastLink": "https://medium.com/web-standards/episode-189-8390bf90f2a7",
+      "date": "2019-08-19",
+      "lang": "ru"
+    },
+    {
+      "name": "Frontend Weekend Remote #1 – Никита Дубко (конференции, синдром самозванца, подготовка докладов)",
+      "podcastLink": "https://podcasts.apple.com/ru/podcast/remote-1-%D0%BD%D0%B8%D0%BA%D0%B8%D1%82%D0%B0-%D0%B4%D1%83%D0%B1%D0%BA%D0%BE-%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B8-%D1%81%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC-%D1%81%D0%B0%D0%BC%D0%BE%D0%B7%D0%B2%D0%B0%D0%BD%D1%86%D0%B0/id1233996390?i=1000488506340",
+      "date": "2019-08-25",
+      "lang": "ru"
+    },
+    {
+      "name": "Девшахта #95: Зачем проводить конференцию на английском языке",
+      "podcastLink": "https://medium.com/devschacht/devschacht-95-fb973bfab049",
+      "date": "2019-09-27",
+      "lang": "ru"
+    },
+    {
+      "name": "Pro Conf #38 Holy.js: Piter 2019 / CI/CD / Opensource это круто / A11y accessibility много не бывает",
+      "podcastLink": "https://www.youtube.com/watch?v=WRGUlomsLaE",
+      "date": "2019-11-18",
+      "lang": "ru"
+    },
+    {
+      "name": "Веб-стандарты №207. 10 лет фронтенда, Firefox 71, WASM, YouTube, селект, экономия трафика в CSS, реклама, WSD всё",
+      "podcastLink": "https://medium.com/web-standards/episode-207-c46d43f1bf08",
+      "date": "2019-12-09",
+      "lang": "ru"
+    }
+  ]
+}
