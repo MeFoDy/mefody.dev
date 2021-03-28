@@ -23,6 +23,7 @@
 - [x] talks + redirects to github pages
 - [x] rss feed
 - [x] service workers
+- [x] tags
 - [ ] jsonfeed
 
 - [ ] about

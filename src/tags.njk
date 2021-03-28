@@ -1,0 +1,17 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - nav
+        - chunk
+        - withTags
+        - tagList
+    addAllPagesToCollections: true
+layout: list.njk
+eleventyComputed:
+    title: 'About #{{ tag }}'
+permalink: /tags/{{ tag | slug }}/
+---

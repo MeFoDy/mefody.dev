@@ -20,7 +20,7 @@ layout: page.njk
                     <div class="collection__item-tags tags">
                         {%- for tag in item.data.tags | filterTags -%}
                             <span class="tags__item">
-                                <a href="#">#{{ tag }}</a>
+                                <a href="/tags/{{ tag }}/">#{{ tag }}</a>
                             </span>
                         {%- endfor -%}
                     </div>
