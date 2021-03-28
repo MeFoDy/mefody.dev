@@ -7,7 +7,7 @@
 {% if cover %}
     {% set ogImage = site.paths.site + page.url + cover %}
 {% else %}
-    {% set ogImage = site.social %}
+    {% set ogImage = site.paths.social %}
 {% endif %}
 
 <meta property="og:url" content="{{ site.paths.site }}{{ page.url }}"/>
