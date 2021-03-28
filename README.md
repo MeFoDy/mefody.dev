@@ -18,9 +18,13 @@
 - [x] 100 lighthouse score
 - [x] headers for netlify
 - [x] convert video for web to av1 and h264
-- [ ] content
-- [ ] open graph
+- [x] content
+- [x] open graph
+- [ ] about
+- [ ] rss feed
+- [ ] jsonfeed
 - [ ] service workers
+
 - [ ] web mentions
 - [ ] styleguide
 - [ ] codepen embed
@@ -29,8 +33,6 @@
 - [ ] cv
 - [ ] 11ty error-overlay
 - [ ] CSP
-- [ ] rss feed
-- [ ] jsonfeed
 - [ ] tests
 - [ ] contributing
 - [ ] pagination

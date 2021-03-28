@@ -54,6 +54,11 @@
     margin: 0;
     margin-bottom: var(--line-space);
     padding: 0;
+    list-style-position: inside;
+}
+
+.article ::marker {
+    color: var(--color-yellow);
 }
 
 .article p {
@@ -194,6 +199,10 @@
     font-size: 1.5em;
     transform: translateY(-50%);
     content: '→';
+}
+
+.article .article__tags {
+    padding: 0;
 }
 
 @media (max-width: 1000px) {

@@ -3,6 +3,7 @@ title: Dev Tips
 layout: list.njk
 permalink: /
 tag: false
+isIndex: true
 eleventyExcludeFromCollections: true
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, dolorem voluptatem dolore aut facilis, similique quidem obcaecati aperiam recusandae reprehenderit expedita non hic accusantium voluptate dicta voluptatum tenetur deleniti quisquam?
+description: Hello, my name is Nikita and I am a front-end developer. Here are life hacks and tips related to my daily work.
 ---

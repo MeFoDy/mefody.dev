@@ -1,5 +1,7 @@
 ---
-title: 'Using a browser as WYSIWYG'
+title: Using a browser as WYSIWYG
+description: Fast ways to change some text on a page.
+cover: images/cover.png
 date: 2021-03-21
 dateUpdated: Last Modified
 tags:
