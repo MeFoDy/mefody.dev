@@ -1,5 +1,10 @@
 [[headers]]
   for = "*.avif"
-    [headers.values]
-      Content-Type = "image/avif"
-      Content-Disposition = "inline"
+  [headers.values]
+    Content-Type = "image/avif"
+    Content-Disposition = "inline"
+
+[[redirects]]
+  from = "/talks/*"
+  to = "https://mefody.github.io/talks/:splat"
+  status = 301
