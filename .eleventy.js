@@ -58,10 +58,16 @@ module.exports = function(config) {
         return `${monthName} ${date}, ${year}`;
     });
 
-    config.addFilter('filterLastArticle', (array) => {
-        let lastElement = [];
-        lastElement.push(array[array.length - 1]);
-        return lastElement;
+    config.addFilter('getLastArticle', (array) => {
+        const articles = [...array].sort((a, b) => a.date.getTime() - b.date.getTime()).reverse();
+
+        return articles[articles.length - 1];
+    });
+
+    config.addFilter('getRSSArticles', (array) => {
+        const articles = [...array].sort((a, b) => a.date.getTime() - b.date.getTime()).reverse();
+
+        return articles.slice(0, 20);
     });
 
     config.addFilter('limit', (array, limit) => {
@@ -107,16 +113,19 @@ module.exports = function(config) {
         return podcasts.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
     });
 
-    config.addFilter('fixLinks', (content) => {
-        const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
+    config.addFilter('prepareRSS', (content) => {
+        const reg = /(src="\.\/)|(src="[^(https://)])|(src="\/)|(href="\.\/)|(href="[^(https://)])|(href="\/)/g;
         const prefix = 'https://mefody.dev' + content.url;
         return content.templateContent.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
                 match = match.slice(0, -1);
                 return match + prefix;
             }
+            if (match === 'src="./' || match === 'href="./') {
+                match = match.slice(0, -2);
+                return match + prefix;
+            }
             return match.slice(0, -1) + prefix + match.slice(-1);
-
         });
     });
 

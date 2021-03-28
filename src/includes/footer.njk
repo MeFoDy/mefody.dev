@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__info">
         <dl class="footer__about">
-            <dt>Nikita Dubko</dt>
+            <dt>{{ site.author }}</dt>
             <dd>CSS Evangelist</dd>
             <dd><a href="/talks/">Tech speaker</a></dd>
             <dd><a href="https://twitter.com/webstandards_ru" rel="noopener">@webstandards_ru</a> editor</dd>
@@ -26,6 +26,6 @@
     </div>
     <div class="footer__copyright">
         &copy;
-        {{ helpers.currentYear() }} / Nikita Dubko
+        {{ helpers.currentYear() }} / {{ site.author }}
     </div>
 </footer>

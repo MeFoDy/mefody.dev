@@ -1,37 +1,30 @@
 ---
-title: test
-description: test
 language: en
-url: https://mefody.dev
-domain: https://mefody.dev
 permalink: feed/rss.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>{{ title }}</title>
-        <description>{{ description }}</description>
+        <title>{{ site.title }}</title>
+        <link>{{ site.paths.site }}</link>
         <language>{{ language }}</language>
-        <link>{{ url }}</link>
+        <description>{{ site.description }}</description>
 
-        {%- for article in collections.chunk | filterLastArticle -%}
-            <lastBuildDate>{{ article.date.toUTCString() }}</lastbuilddate>
-        {%- endfor -%}
-
-        {%- for article in collections.chunk | reverse  %}
-            <item>
-                <title>{{ article.data.title }}</title>
-                <link href="{{ domain }}{{ article.url }}"/>
-                <description>
-                    <![CDATA[
-                        {{ article | fixLinks | safe }}
-                    ]]>
-                </description>
-                <pubdate>{{ article.date.toUTCString() }}</pubdate>
-                <guid>{{ article.url | url }}</guid>
-            </item>
+        {% set lastArticle = collections.chunk | getLastArticle %}
+        <pubDate>{{ lastArticle.date.toUTCString() }}</pubDate>
+        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastbuilddate>
+        {%- for article in collections.chunk | getRSSArticles %}
+        <item>
+            <title>{{ article.data.title }}</title>
+            <link>{{ site.paths.site }}{{ article.url }}</link>
+            <pubDate>{{ article.date }}</pubDate>
+            <description>
+                <![CDATA[{{ article | prepareRSS | safe }}]]>
+            </description>
+            <guid>{{ article.url | url }}</guid>
+            <author>{{ site.author }}</author>
+        </item>
         {%- endfor %}
-
     </channel>
 </rss>
