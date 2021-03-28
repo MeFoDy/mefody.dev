@@ -4,8 +4,9 @@ permalink: feed/rss.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        <atom:link href="{{ site.paths.feed }}" rel="self" type="application/rss+xml" />
         <title>{{ site.title }}</title>
         <link>{{ site.paths.site }}</link>
         <language>{{ language }}</language>
@@ -13,17 +14,16 @@ eleventyExcludeFromCollections: true
 
         {% set lastArticle = collections.chunk | getLastArticle %}
         <pubDate>{{ lastArticle.date.toUTCString() }}</pubDate>
-        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastbuilddate>
+        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastBuildDate>
         {%- for article in collections.chunk | getRSSArticles %}
         <item>
             <title>{{ article.data.title }}</title>
             <link>{{ site.paths.site }}{{ article.url }}</link>
-            <pubDate>{{ article.date }}</pubDate>
+            <pubDate>{{ article.date.toUTCString() }}</pubDate>
             <description>
                 <![CDATA[{{ article | prepareRSS | safe }}]]>
             </description>
-            <guid>{{ article.url | url }}</guid>
-            <author>{{ site.author }}</author>
+            <guid>{{ site.paths.site }}{{ article.url | url }}</guid>
         </item>
         {%- endfor %}
     </channel>

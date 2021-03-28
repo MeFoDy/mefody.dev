@@ -1,8 +1,10 @@
-const prettydata = require('pretty-data');
+const minifyXML = require('minify-xml').minify;
 
 function xmlmin(content, outputPath) {
     if (outputPath && outputPath.endsWith('.xml')) {
-        const result = prettydata.pd.xmlmin(content);
+        const result = minifyXML(content, {
+
+        });
         return result;
     }
     return content;
