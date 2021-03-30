@@ -24,14 +24,13 @@
 - [x] rss feed
 - [x] service workers
 - [x] tags
-- [ ] jsonfeed
+- [x] dark theme
 
 - [ ] about
 - [ ] web mentions
 - [ ] styleguide
 - [ ] codepen embed
 - [ ] twitter embed lite
-- [ ] dark theme
 - [ ] cv
 - [ ] 11ty error-overlay
 - [ ] CSP

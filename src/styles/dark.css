@@ -1,0 +1,39 @@
+:root {
+    --color-white: #f0f0f0;
+    --color-black: #121212;
+
+    --color-bg: var(--color-black);
+    --color-text: var(--color-white);
+    --color-outline: var(--color-red);
+    --color-subtext: var(--color-lightgrey);
+    --color-accent-base: 136, 0, 136;
+    --color-code: var(--color-lightgrey);
+    --color-delimeter: var(--color-darkgrey);
+
+    --color-prism-bg: black;
+    --color-prism-text: #f8f8f2;
+    --color-prism-comment: #8292a2;
+    --color-prism-punctuation: #f8f8f2;
+    --color-prism-boolean: #ae81ff;
+    --color-prism-selector: #a6e22e;
+    --color-prism-operator: #f8f8f2;
+    --color-prism-keyword: #66d9ef;
+    --color-prism-function: #e6db74;
+    --color-prism-variable: #fd971f;
+}
+
+.article img {
+    filter: grayscale(30%) brightness(0.95);
+}
+
+.article video {
+    filter: brightness(0.95);
+}
+
+.header__logo {
+    filter: invert(1);
+}
+
+.footer__social-link--github::before {
+    background-image: url('/images/github-logo-light.svg');
+}

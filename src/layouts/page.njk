@@ -7,6 +7,8 @@
             {{ renderData.title or title }}{% if not isIndex %} | {{ site.title }}{% endif %}
         </title>
 
+        <meta name="color-scheme" content="dark light">
+
         <meta name="description" content="{{ description or site.description }}">
 
         {% include 'favicon.njk' %}
@@ -17,6 +19,7 @@
         {% include 'meta-rss.njk' %}
 
         <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body class="page__body">
 

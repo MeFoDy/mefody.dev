@@ -13,7 +13,7 @@
     grid-column: 1 / -1;
     margin-bottom: calc(2 * var(--line-space));
     padding-right: var(--line-space);
-    border-bottom: 1px solid var(--color-yellow);
+    border-bottom: 1px solid var(--color-accent);
 }
 
 .collection__head > * {
@@ -23,7 +23,7 @@
 .collection__description {
     margin-bottom: var(--line-space);
     padding: 0;
-    color: var(--color-grey);
+    color: var(--color-subtext);
     font-weight: 300;
 }
 
@@ -40,7 +40,7 @@
 
 .collection__item-link {
     display: block;
-    color: var(--color-black);
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -55,14 +55,14 @@ h2.collection__item-title {
 .collection__item-meta {
     display: flex;
     flex-wrap: wrap;
-    color: var(--color-grey);
+    color: var(--color-subtext);
     font-weight: 300;
 }
 
 .collection__item-meta > :not(:last-child)::after {
     display: inline-block;
     padding: 0 0.5em;
-    color: var(--color-lightgrey);
+    color: var(--color-delimeter);
     content: '·';
 }
 

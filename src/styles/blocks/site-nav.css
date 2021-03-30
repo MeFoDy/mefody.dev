@@ -18,7 +18,7 @@
 .site-nav__item a {
     display: inline-block;
     padding: 0.25em 0;
-    color: var(--color-black);
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -26,11 +26,6 @@
 .site-nav__item a:focus,
 .site-nav__item a:active {
     text-decoration: underline;
-}
-
-.site-nav__item a:not([href]) {
-    color: var(--color-lightgrey);
-    text-decoration: none;
 }
 
 @media (max-width: 1000px) {

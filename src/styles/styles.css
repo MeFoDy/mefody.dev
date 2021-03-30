@@ -14,12 +14,11 @@
 :root {
     --color-grey: #797676;
     --color-black: #000000;
+    --color-white: #ffffff;
     --color-lightgrey: #bebbbb;
     --color-darkgrey: #514f4f;
-    --color-yellow: #ffcc00;
-    --color-yellow-a3: #ffcc004d;
-    --color-blue: #0033ff;
     --color-red: #ff4d00;
+    --color-accent-base: 255, 204, 0;
 
     --line-height: 1.34;
     --font-size: 18px;
@@ -28,18 +27,43 @@
     --max-column-width: 1000px;
     --mobile-border-width: 15px;
 
+    --transition-duration-l: 0.5s;
+    --transition-timing: ease;
+
     --font-code: 'Fira Code', monospace;
+}
+
+:root {
+    --color-bg: var(--color-white);
+    --color-text: var(--color-black);
+    --color-subtext: var(--color-grey);
+    --color-outline: var(--color-red);
+    --color-accent: rgb(var(--color-accent-base));
+    --color-accent-alpha: rgba(var(--color-accent-base), 0.3);
+    --color-code: var(--color-darkgrey);
+    --color-delimeter: var(--color-lightgrey);
+
+    --color-prism-bg: #fef9f3;
+    --color-prism-text: black;
+    --color-prism-comment: slategray;
+    --color-prism-punctuation: #999999;
+    --color-prism-boolean: #990055;
+    --color-prism-selector: #138512;
+    --color-prism-operator: #ab5f06;
+    --color-prism-keyword: #0077aa;
+    --color-prism-function: #c333a4;
+    --color-prism-variable: #e60101;
 }
 
 /* Global styles */
 :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 4px var(--color-red);
+    box-shadow: 0 0 0 4px var(--color-outline);
 }
 
 ::selection {
-    color: var(--color-black);
-    background: var(--color-yellow);
+    color: var(--color-text);
+    background: var(--color-accent);
 }
 
 @media (max-width: 600px) {

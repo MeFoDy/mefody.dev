@@ -8,14 +8,14 @@
     display: inline-block;
     margin-right: 0.5em;
     padding: 0 0.5em;
-    color: var(--color-black);
+    color: var(--color-text);
     text-decoration: none;
-    background: var(--color-yellow);
-    border: 2px solid var(--color-yellow);
+    background: var(--color-accent);
+    border: 2px solid var(--color-accent);
     border-radius: 1em;
 }
 
 .tags__item a:hover,
 .tags__item a:focus {
-    background: var(--color-yellow-a3);
+    background: var(--color-accent-alpha);
 }

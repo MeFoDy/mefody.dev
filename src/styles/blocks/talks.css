@@ -13,7 +13,7 @@
     grid-column: 1 / -1;
     margin-bottom: calc(2 * var(--line-space));
     padding-right: var(--line-space);
-    border-bottom: 1px solid var(--color-yellow);
+    border-bottom: 1px solid var(--color-accent);
 }
 
 .talks__head > * {
@@ -23,7 +23,7 @@
 .talks__description {
     margin-bottom: var(--line-space);
     padding: 0;
-    color: var(--color-grey);
+    color: var(--color-subtext);
     font-weight: 300;
 }
 
@@ -42,7 +42,7 @@
     display: block;
     width: 200vw;
     height: calc(100% + 0.6em);
-    background-color: var(--color-yellow);
+    background-color: var(--color-accent);
     content: '';
 }
 
@@ -65,28 +65,24 @@
     display: block;
     width: 25%;
     height: 1px;
-    background: var(--color-yellow);
+    background: var(--color-accent);
     content: '';
 }
 
-.talks__talk-title {
-    margin-bottom: var(--line-space);
-}
-
 .talks__talk-title a {
-    color: var(--color-black);
+    color: var(--color-text);
     text-decoration: none;
 }
 
 .talks__talk-title a:hover {
-    background: var(--color-yellow-a3);
+    background: var(--color-accent-alpha);
 }
 
 .talks__talk-description {
     margin: 0;
     margin-bottom: var(--line-space);
     padding: 0;
-    color: var(--color-grey);
+    color: var(--color-subtext);
     font-weight: 300;
     font-size: 0.8em;
 }
@@ -107,17 +103,17 @@
 }
 
 .talks__talk-version a {
-    color: var(--color-grey);
-    text-decoration-color: var(--color-yellow);
+    color: var(--color-subtext);
+    text-decoration-color: var(--color-accent);
     text-decoration-thickness: 1px;
 }
 
 .talks__talk-version .talks__conference {
-    color: var(--color-black);
+    color: var(--color-text);
 }
 
 .talks__talk-version a:hover {
-    background: var(--color-yellow-a3);
+    background: var(--color-accent-alpha);
 }
 
 .talks__language {
@@ -128,7 +124,7 @@
     text-align: center;
     text-transform: uppercase;
     vertical-align: text-top;
-    background-color: var(--color-yellow-a3);
+    background-color: var(--color-accent-alpha);
     border-radius: 0.3em;
 }
 
@@ -140,7 +136,7 @@
 .talks__talk-links span:not(:last-child)::after {
     display: inline-block;
     padding: 0 0.5em;
-    color: var(--color-lightgrey);
+    color: var(--color-delimeter);
     content: '·';
 }
 
@@ -161,7 +157,7 @@
 .talks__talk-links a:hover,
 .talks__talk-links a:focus,
 .talks__talk-links a:active {
-    color: var(--color-black);
+    color: var(--color-text);
 }
 
 .talks__talk-links a:hover::before,

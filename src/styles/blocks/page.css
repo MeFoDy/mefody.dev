@@ -1,4 +1,9 @@
 .page {
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition:
+        color var(--transition-duration-l) var(--transition-timing),
+        background-color var(--transition-duration-l) var(--transition-timing);
     scroll-behavior: smooth;
 }
 
@@ -7,7 +12,6 @@
     grid-template-columns: 1fr var(--main-column-width) 1fr;
     grid-gap: 0 3em;
     margin: 0;
-    color: var(--color-black);
     font-size: var(--font-size);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     font-family: system-ui;

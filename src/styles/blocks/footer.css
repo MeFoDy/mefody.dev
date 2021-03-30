@@ -1,17 +1,17 @@
 .footer {
     grid-column: 1 / -1;
     padding: calc(2 * var(--line-space)) var(--line-space);
-    border-top: 1px solid var(--color-yellow);
+    border-top: 1px solid var(--color-accent);
 }
 
 .footer a {
-    color: var(--color-grey);
-    text-decoration-color: var(--color-yellow);
+    color: var(--color-subtext);
+    text-decoration-color: var(--color-accent);
     text-decoration-thickness: 2px;
 }
 
 .footer a:hover {
-    background: var(--color-yellow-a3);
+    background: var(--color-accent-alpha);
 }
 
 .footer__info {
