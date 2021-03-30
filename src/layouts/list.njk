@@ -9,7 +9,7 @@ layout: page.njk
         </p>
     </div>
     <ul class="collection__list">
-        {%- for item in collections.withTags | filterCollection(tag) | reverse -%}
+        {%- for item in collections.withTags | filterCollection(tag) | sortByDate | reverse -%}
             <li class="collection__item">
                 <a href="{{ item.url }}" class="collection__item-link">
                     <h2 class="collection__item-title">{{ item.data.title }}</h2>

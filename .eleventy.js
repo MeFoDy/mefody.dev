@@ -58,14 +58,22 @@ module.exports = function(config) {
         return `${monthName} ${date}, ${year}`;
     });
 
+    function sortByDate(array, dateField = 'date') {
+        return [...array].sort((a, b) => a[dateField].getTime() - b[dateField].getTime());
+    }
+
     config.addFilter('getLastArticle', (array) => {
-        const articles = [...array].sort((a, b) => a.date.getTime() - b.date.getTime()).reverse();
+        const articles = sortByDate(array).reverse();
 
         return articles[articles.length - 1];
     });
 
+    config.addFilter('sortByDate', (array) => {
+        return sortByDate(array);
+    });
+
     config.addFilter('getRSSArticles', (array) => {
-        const articles = [...array].sort((a, b) => a.date.getTime() - b.date.getTime()).reverse();
+        const articles = sortByDate(array).reverse();
 
         return articles.slice(0, 20);
     });
@@ -100,7 +108,7 @@ module.exports = function(config) {
             talk.date = lastDate;
         });
 
-        return talks.sort((a, b) => a.date.getTime() - b.date.getTime());
+        return sortByDate(talks);
     });
 
     config.addFilter('preparePodcasts', (data) => {
@@ -110,7 +118,7 @@ module.exports = function(config) {
             podcast.dateObj = new Date(podcast.date);
         });
 
-        return podcasts.sort((a, b) => a.dateObj.getTime() - b.dateObj.getTime());
+        return sortByDate(podcasts, 'dateObj');
     });
 
     config.addFilter('prepareRSS', (content) => {

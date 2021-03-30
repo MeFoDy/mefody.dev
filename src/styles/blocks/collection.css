@@ -39,7 +39,7 @@
 }
 
 .collection__item-link {
-    display: block;
+    display: inline-block;
     color: var(--color-text);
     text-decoration: none;
 }

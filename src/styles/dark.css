@@ -37,3 +37,11 @@
 .footer__social-link--github::before {
     background-image: url('/images/github-logo-light.svg');
 }
+
+.talks__talk-links a::before {
+    filter: grayscale(0.5);
+}
+
+.talks__transcription::before {
+    background-image: url('/images/text-icon-light.svg');
+}
