@@ -23,7 +23,7 @@ Andrey Sitnik wrote a [great article](https://evilmartians.com/chronicles/better
 </video>
 ```
 
-This snippet works great in modern Chrome and Firefox [with AV1-codec supported](https://caniuse.com/av1), falling back to bulletproof H264-codec for other browsers.
+This snippet works great in modern Chrome and Firefox [with AV1-codec supported](https://caniuse.com/av1), falling back to the bulletproof H264-codec for other browsers.
 
 ## ffmpeg
 
