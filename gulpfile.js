@@ -13,7 +13,7 @@ const PUBLIC_PATH = '_public';
 // Styles
 
 gulp.task('styles', () => {
-    return gulp.src(`${PUBLIC_PATH}/styles/styles.css`)
+    return gulp.src(`${PUBLIC_PATH}/styles/{styles,dark}.css`)
         .pipe(postcss([
             require('postcss-import'),
             require('postcss-color-hex-alpha'),
@@ -48,7 +48,7 @@ gulp.task('scripts', () => {
 gulp.task('clean', () => {
     return del([
         `${PUBLIC_PATH}/styles/**/*`,
-        `!${PUBLIC_PATH}/styles/styles.css`,
+        `!${PUBLIC_PATH}/styles/{styles,dark}.css`,
         `${PUBLIC_PATH}/scripts/**/*`,
         `!${PUBLIC_PATH}/scripts/scripts.js`,
     ]);

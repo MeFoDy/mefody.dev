@@ -14,6 +14,7 @@
     "predeploy": "npm run build",
     "deploy": "echo 'Not ready yet'",
     "start": "eleventy --serve --quiet",
+    "prod": "npm run build && npx live-server _public",
     "build": "rm -rf _public && eleventy && gulp build",
     "fix": "eslint --fix && stylelint --fix \"src/styles/**/*.css\"",
     "lint:css": "stylelint \"src/styles/**/*.css\"",
