@@ -1,0 +1,47 @@
+.webmention {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: var(--line-space);
+}
+
+.webmention--own .webmention__author-photo {
+    border: 3px solid var(--color-accent);
+}
+
+.webmention__meta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.webmention__author[class] {
+    display: inline-block;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.webmention__author-photo {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48px;
+    margin-right: 0.75em;
+    border-radius: 100em;
+}
+
+@media (max-width: 600px) {
+    .webmention__author-photo {
+        width: 36px;
+    }
+}
+
+.webmention__date {
+    color: var(--color-subtext);
+}
+
+.webmention__content[class] {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+}

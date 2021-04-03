@@ -31,4 +31,7 @@ layout: page.njk
             {% if nextPost %}<a href="{{ nextPost.url }}" class="article__nav-button article__next">{{ nextPost.data.title }}</a>{% endif %}
         </div>
     </div>
+    <div class="article__webmentions">
+        {% include 'webmentions.njk' %}
+    </div>
 </article>

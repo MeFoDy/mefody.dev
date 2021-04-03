@@ -206,6 +206,10 @@
     padding: 0;
 }
 
+.article__webmentions {
+    padding: var(--line-space) 0;
+}
+
 @media (max-width: 1000px) {
     .article {
         grid-template-columns: 1fr;

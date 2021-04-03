@@ -8,6 +8,8 @@
 @import './blocks/article.css';
 @import './blocks/footer.css';
 @import './blocks/tags.css';
+@import './blocks/webmentions.css';
+@import './blocks/webmention.css';
 @import './blocks/error-page.css';
 
 /* Variables */

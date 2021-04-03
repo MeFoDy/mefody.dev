@@ -15,4 +15,11 @@
   status = 301
 
 [[plugins]]
-    package = "./plugins/webmention-cache"
+  package = "./plugins/webmention-cache"
+
+[[plugins]]
+  package = "netlify-plugin-webmentions"
+  [plugins.inputs]
+    baseUrl = "https://mefody.dev"
+    feedPath = "/feed/rss.xml"
+    limit = 3

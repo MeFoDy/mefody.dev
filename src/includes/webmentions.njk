@@ -1,2 +1,42 @@
-<link rel="webmention" href="https://webmention.io/{{ site.paths.domain }}/webmention" />
-<link rel="pingback" href="https://webmention.io/{{ site.paths.domain }}/xmlrpc" />
+{%- set mentions = webmentions.children | webmentionsByUrl(page.url) -%}
+<section class="webmentions">
+    <h2>Webmentions <a href="https://indieweb.org/Webmention" target="_blank" aria-label="What is it?">[?]</a></h2>
+    {% if mentions | length %}
+        <ol class="webmentions__list">
+        {% for webmention in mentions %}
+            <li class="webmentions__item webmention {% if webmention | isOwnWebmention %}webmention--own{% endif %}">
+
+                {% if webmention.author and webmention.author.photo %}
+                    {%- set wmAuthorPhoto = webmention.author.photo -%}
+                {% else %}
+                    {%- set wmAuthorPhoto = '/images/user.svg' -%}
+                {% endif %}
+
+                {% if webmention.author and webmention.author.name %}
+                    {%- set wmAuthorName = webmention.author.name -%}
+                {% else %}
+                    {%- set wmAuthorName = 'Anonymous' -%}
+                {% endif %}
+
+                <img class="webmention__author-photo" src="{{ wmAuthorPhoto }}" alt="" width="48" height="48" loading="lazy" decoding="async">
+
+                <div class="webmention__body">
+                    <div class="webmention__meta">
+                        <a class="webmention__author" {% if webmention.url %}href="{{ webmention.url }}"{% endif %} rel="noreferrer">{{ wmAuthorName }}</a>
+                        {% if webmention.published %}
+                            <time class="webmention__date" datetime="{{ webmention.published }}">
+                                {{ webmention.published | dateFromISO | readableDate }}
+                            </time>
+                        {% endif %}
+                    </div>
+                    <p class="webmention__content" {% if webmention.content.value | isCyrillic %}lang="ru"{% endif %}>
+                        {{ webmention.content.value | safe }}
+                    </p>
+                </div>
+            </li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p class="webmentions__empty">No webmentions yet.</p>
+    {% endif %}
+</section>

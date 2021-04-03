@@ -12,11 +12,12 @@
   },
   "scripts": {
     "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
-    "prod": "ELEVENTY_ENV=production npm run build && npx live-server _public",
+    "prod": "npm run build:prod && npx live-server _public",
     "build": "rm -rf _public && eleventy && gulp build",
+    "build:prod": "ELEVENTY_ENV=production npm run build",
     "fix": "eslint --fix && stylelint --fix \"src/styles/**/*.css\"",
     "lint:css": "stylelint \"src/styles/**/*.css\"",
-    "lint:editorconfig": "editorconfig-checker -exclude \"\\.avif$\"",
+    "lint:editorconfig": "editorconfig-checker",
     "lint:js": "eslint .",
     "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js"
   },
@@ -28,7 +29,7 @@
     "datauri": "^3.0.0",
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
-    "editorconfig-checker": "^3.3.0",
+    "editorconfig-checker": "^4.0.2",
     "eslint": "^7.22.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -42,11 +43,13 @@
     "lint-staged": "^10.5.4",
     "lodash": "^4.17.21",
     "minify-xml": "^2.5.0",
+    "netlify-plugin-webmentions": "^1.1.1",
     "node-fetch": "^2.6.1",
     "postcss": "^8.1.1",
     "postcss-color-hex-alpha": "^6.0.0",
     "postcss-csso": "^5.0.0",
     "postcss-import": "^12.0.1",
+    "sanitize-html": "^2.3.3",
     "sharp": "^0.27.2",
     "simple-git-hooks": "^2.0.3",
     "stylelint": "^13.8.0",
@@ -56,7 +59,7 @@
   },
   "lint-staged": {
     "*": [
-      "editorconfig-checker -exclude \"\\.avif$\""
+      "editorconfig-checker"
     ],
     "*.js": [
       "eslint --fix"
