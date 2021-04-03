@@ -25,9 +25,9 @@
 - [x] service workers
 - [x] tags
 - [x] dark theme
+- [x] web mentions
 
 - [ ] about
-- [ ] web mentions
 - [ ] styleguide
 - [ ] codepen embed
 - [ ] twitter embed lite

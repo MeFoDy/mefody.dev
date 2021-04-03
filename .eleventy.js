@@ -161,7 +161,7 @@ module.exports = function(config) {
     });
 
     config.addFilter('likesAndRepostsByUrl', function(webmentions, url) {
-        const mentions = webmentions.filter((entry) => entry['wm-target'] === url);
+        const mentions = webmentions.filter((entry) => new URL(entry['wm-target']).pathname === url);
         const likes = mentions.filter((entry) => ['like-of', 'bookmark-of'].includes(entry['wm-property']));
         const reposts = mentions.filter((entry) => ['repost-of'].includes(entry['wm-property']));
 

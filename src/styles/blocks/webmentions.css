@@ -21,6 +21,10 @@
     content: '';
 }
 
+.webmentions__likes {
+    font-weight: 300;
+}
+
 .webmentions__list {
     margin: 0;
     padding: 0;

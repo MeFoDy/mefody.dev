@@ -26,6 +26,7 @@
     display: inline-block;
     box-sizing: border-box;
     width: 48px;
+    min-width: 48px;
     margin-right: 0.75em;
     border-radius: 100em;
 }
@@ -33,6 +34,7 @@
 @media (max-width: 600px) {
     .webmention__author-photo {
         width: 36px;
+        min-width: 36px;
     }
 }
 
