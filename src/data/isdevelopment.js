@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = function() {
-    return /serve/.test(process.argv.join());
+    return process.env.ELEVENTY_ENV === 'development';
 };

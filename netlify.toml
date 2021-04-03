@@ -4,7 +4,15 @@
     Content-Type = "image/avif"
     Content-Disposition = "inline"
 
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    cache-control = "max-age=0,no-cache,no-store,must-revalidate"
+
 [[redirects]]
   from = "/talks/*"
   to = "https://mefody.github.io/talks/:splat"
   status = 301
+
+[[plugins]]
+    package = "./plugins/webmention-cache"
