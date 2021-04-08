@@ -1,4 +1,4 @@
-{% macro video(src, width, height, muted = true) %}<video width="{{ width }}" height="{{ height }}" controls {{ "muted" if muted }} playsinline preload="metadata">
+{% macro video(src, width, height, muted = true, loop = false) %}<video width="{{ width }}" height="{{ height }}" controls {{ "muted" if muted }} {{ "loop" if loop }} playsinline preload="metadata">
     <source src="{{ src }}.av1.mp4" type="video/mp4; codecs=av01.0.05M.08">
     <source src="{{ src }}.h264.mp4" type="video/mp4">
 </video>{% endmacro %}
