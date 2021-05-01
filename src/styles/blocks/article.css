@@ -55,8 +55,7 @@
 }
 
 .article ul {
-    margin: 0;
-    margin-bottom: var(--line-space);
+    margin: 0 0 var(--line-space);
     padding: 0;
     list-style-position: inside;
 }
@@ -232,6 +231,7 @@
 }
 
 .article .article__tags {
+    margin-bottom: var(--line-space);
     padding: 0;
 }
 
