@@ -1,7 +1,7 @@
 ---
 title: Work with cookies the modern way
 description: Cookie Store API is a way to avoid the pain.
-# cover: images/cover.png
+cover: images/cover.png
 date: 2021-05-01
 dateUpdated: Last Modified
 tags:
