@@ -29,7 +29,7 @@ const cookies = document.cookie;
 
 Yeah, that’s it. It returns a string with all cookies separated by `;`.
 
-Hot to get a single cookie value? Right, split the string manually.
+How to get a single cookie value? Right, split the string manually.
 
 ```js
 function getCookieValue(name) {
