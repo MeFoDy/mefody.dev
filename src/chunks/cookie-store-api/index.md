@@ -147,9 +147,9 @@ await cookieStore.set({
     name: 'name',
     value: 'value',
     expires: Date.now() + 86400,
-    domain: (new URL(self.location.href)).domain,
+    domain: self.location.host,
     path: '/',
-    secure: (new URL(self.location.href)).protocol === 'https:',
+    secure: self.location.protocol === 'https:',
     httpOnly: false,
 });
 ```
