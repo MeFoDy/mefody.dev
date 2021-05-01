@@ -40,6 +40,10 @@
     background-size: 100% var(--line-space);
 }
 
+.article h3 {
+    margin-bottom: var(--line-space);
+}
+
 .article a {
     color: var(--color-subtext);
     text-decoration-color: var(--color-accent);
@@ -64,6 +68,31 @@
 .article p {
     margin: 0;
     margin-bottom: var(--line-space);
+}
+
+.article blockquote {
+    position: relative;
+    margin: 0 0 var(--line-space);
+    padding-left: var(--line-space);
+}
+
+.article blockquote p:first-child {
+    margin-top: var(--line-space);
+}
+
+.article blockquote::before {
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-size: 3em;
+    transform: translateX(-100%);
+    content: '“';
+}
+
+@media (max-width: 750px) {
+    .article blockquote::before {
+        transform: translateX(-40%);
+    }
 }
 
 .article figure {
