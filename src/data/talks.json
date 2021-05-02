@@ -432,6 +432,19 @@
           "language": "ru"
         }
       ]
+    },
+    {
+      "title": "«Напомни через минуту», или Как считать время в браузере",
+      "description": "Пришла как-то к разработчику Мефодию задача: показывать через заданное пользователем время попап с напоминалкой, что время прошло. Написал Мефодий setTimeout, запушил, тикет закрыл. А пользователь так и не дождался своей напоминалки. В докладе поговорим о том, как браузеры работают со временем, что такое время вообще и как всё-таки показать напоминалку в правильный момент.",
+      "versions": [
+        {
+          "slides": "wait-for-minute/",
+          "conference": "HolyJS 2021 Piter",
+          "conferenceLink": "https://holyjs-piter.ru/2021/spb/talks/tmkqe8lssoof7j1fspsgc/",
+          "date": "2021-04-20",
+          "language": "ru"
+        }
+      ]
     }
   ],
   "podcasts": [
@@ -499,6 +512,18 @@
       "name": "Веб-стандарты №207. 10 лет фронтенда, Firefox 71, WASM, YouTube, селект, экономия трафика в CSS, реклама, WSD всё",
       "podcastLink": "https://medium.com/web-standards/episode-207-c46d43f1bf08",
       "date": "2019-12-09",
+      "lang": "ru"
+    },
+    {
+      "name": "Тяжелое утро с HolyJS / Евгений Кот, Никита Дубко и Саша Шинкевич",
+      "podcastLink": "https://youtu.be/yZzf__deBhQ",
+      "date": "2021-03-16",
+      "lang": "ru"
+    },
+    {
+      "name": "Да как так-то? Выпуск 3. Софт скиллы для разработчиков",
+      "podcastLink": "https://podcasts.apple.com/us/podcast/%D1%81%D0%BE%D1%84%D1%82-%D1%81%D0%BA%D0%B8%D0%BB%D0%BB%D1%8B-%D0%B4%D0%BB%D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2/id1559540600?i=1000518885368",
+      "date": "2021-04-27",
       "lang": "ru"
     }
   ]

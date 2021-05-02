@@ -6,6 +6,7 @@ date: 2021-05-01
 dateUpdated: Last Modified
 tags:
     - js
+    - chunk
 ---
 
 Have you ever worked with cookies? Did you find working with them obvious? I think it has a lot of nuances for newbies.
