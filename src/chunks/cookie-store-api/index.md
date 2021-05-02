@@ -13,7 +13,7 @@ Have you ever worked with cookies? Did you find working with them obvious? I th
 
 ## document.cookie
 
-Let’s take a look at the classic way to work with cookies. We’ve had cookies in the specification since 1994, [thanks to Netscape](https://curl.se/rfc/cookie_spec.html). Netscape implemented `document.cookies` [in 1996](https://www.erikoest.dk/cookies.htm) in their Netscape Navigator. Look at this definition of a cookie from those days.
+Let’s take a look at the classic way to work with cookies. We’ve had cookies in the specification since 1994, [thanks to Netscape](https://curl.se/rfc/cookie_spec.html). Netscape implemented `document.cookie` [in 1996](https://www.erikoest.dk/cookies.htm) in their Netscape Navigator. Look at this definition of a cookie from those days.
 
 > A cookie is a small piece of information stored on the client machine in the `cookies.txt` file.
 
