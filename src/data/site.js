@@ -7,7 +7,7 @@ module.exports = {
         domain: 'mefody.dev',
         site: 'https://mefody.dev',
         feed: 'https://mefody.dev/feed/rss.xml',
-        social: 'https://mefody.dev/images/favicon/logo-tips-192.png',
+        social: 'https://mefody.dev/images/og.png',
         github: 'https://github.com/MeFoDy/mefody.dev',
     },
     buildYear: new Date().getFullYear(),

@@ -70,7 +70,7 @@ pre {
 }
 ```
 
-If you read this article in Safari, sorry — you won’t see the difference. But for other browsers, you can set the width of `\t` to absolute units like `px`, `em`, etc.
+If you read this article in Safari 13-, sorry — you won’t see the difference. But for other browsers, you can set the width of `\t` to absolute units like `px`, `em`, etc.
 
 And yeah, it can be animated.
 
