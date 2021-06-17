@@ -7,6 +7,7 @@ dateUpdated: Last Modified
 tags:
     - html
     - js
+    - chunk
 ---
 
 Sometimes I need to create a link that should show a system dialog to save the file. Browsers are pretty smart to open that dialog for some binaries, e.g. for archives or `*.exe`. But what if I want to download an image or some video?
@@ -98,7 +99,7 @@ It’s even easier, but not so performant.
 
 You can play with the full demo here:
 - [Demo](./demo/index.html)
-- [Source code](https://github.com/MeFoDy/mefody.dev/blob/main{{ page.url }}demo/index.html)
+- [Source code](https://github.com/MeFoDy/mefody.dev/blob/main/src{{ page.url }}demo/index.html)
 
 ## Sources
 
