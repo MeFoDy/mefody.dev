@@ -54,7 +54,8 @@
     background: var(--color-accent-alpha);
 }
 
-.article ul {
+.article ul,
+.article ol {
     margin: 0 0 var(--line-space);
     padding: 0;
     list-style-position: inside;

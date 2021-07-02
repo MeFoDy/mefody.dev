@@ -7,6 +7,12 @@
     scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion) {
+    .page {
+        scroll-behavior: auto;
+    }
+}
+
 .page__body {
     display: grid;
     grid-template-columns: 1fr var(--main-column-width) 1fr;
