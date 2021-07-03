@@ -1,6 +1,6 @@
 ---
 title: Change the form control color with accent-color property
-description: Imagine if you could only change the color of checkboxes to match the theme color of your site...
+description: Imagine if you could change the color of checkboxes to match the theme color of your site...
 cover: images/cover.jpg
 date: 2021-07-02
 dateUpdated: Last Modified
@@ -21,7 +21,7 @@ Do you like default colors used by form controls such as radio buttons, checkbox
 
 When we want to change these default colors, we have to use some of 1001 ways to create custom-styled form controls with all their bugs coming.
 
-Imagine if you could only change the color of checkboxes to match the theme color of your site...
+Imagine if you could change the color of checkboxes to match the theme color of your site...
 
 If your heart is beating faster after the words above, what do you think about the `accent-color` CSS property?
 
@@ -115,7 +115,7 @@ If you've already made your web application installable (PWA), you can set the t
 
 In the new [Safari 15](https://developer.apple.com/documentation/safari-release-notes/safari-15-beta-release-notes#HTML) this tiny snippet will make your website look trendy on macOS too.
 
-But the next step will be full coloring.
+But the next step will be its full coloring.
 
 ```html
 <meta name="theme-color" content="#ffcc00">
@@ -128,8 +128,8 @@ But the next step will be full coloring.
 
 The `accent-color` is now supported under experimental flags in Firefox and Chrome. You can watch the statuses in bug trackers:
 
-- Chrome Platform Status: [https://chromestatus.com/feature/4752739957473280](https://chromestatus.com/feature/4752739957473280)
-- Firefox Bugzilla: [https://bugzilla.mozilla.org/show_bug.cgi?id=1705605](https://bugzilla.mozilla.org/show_bug.cgi?id=1705605)
-- WebKit Bugzilla: [https://bugs.webkit.org/show_bug.cgi?id=227587](https://bugs.webkit.org/show_bug.cgi?id=227587)
+- [Chrome Platform Status](https://chromestatus.com/feature/4752739957473280)
+- [Firefox Bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1705605)
+- [WebKit Bugzilla](https://bugs.webkit.org/show_bug.cgi?id=227587)
 
 It still has some bugs and difficulties that need to be solved. You can set the color you want, but the user agent must keep the form control accessible. So it's still in beta. But you can help browsers test the early implementations of the feature and share your feedback in bug trackers.
