@@ -8,6 +8,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
     config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
+    config.addPassthroughCopy('src/robots.txt');
 
     // Collections
 
