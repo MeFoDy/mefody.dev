@@ -59,7 +59,7 @@ gulp.task('clean', () => {
 gulp.task('cache:hash', () => {
     return gulp.src([
         `${PUBLIC_PATH}/fonts/*.woff2`,
-        `${PUBLIC_PATH}/images/**/*.{svg,png,jpg}`,
+        `${PUBLIC_PATH}/images/**/*.{svg,png,jpg,avif}`,
         `${PUBLIC_PATH}/scripts/*.js`,
         `${PUBLIC_PATH}/styles/*.css`,
         `${PUBLIC_PATH}/manifest.webmanifest`,
@@ -76,7 +76,8 @@ gulp.task('cache:hash', () => {
 gulp.task('cache:replace', () => {
     return gulp
         .src([
-            `${PUBLIC_PATH}/**/*.{html,css}`, `${PUBLIC_PATH}/manifest-*.webmanifest`,
+            `${PUBLIC_PATH}/**/*.{html,css}`,
+            `${PUBLIC_PATH}/manifest-*.webmanifest`,
         ])
         .pipe(revRewrite({
             manifest: gulp.src(`${PUBLIC_PATH}/rev.json`)
@@ -88,19 +89,32 @@ gulp.task('service-worker', () => {
     return workboxBuild.generateSW({
         globDirectory: PUBLIC_PATH,
         globPatterns: [
-            '**/*.{html,js,css,webmanifest,ico,woff2}',
+            '**/*.{js,css,webmanifest,ico,woff2}',
+            '**/404.html',
         ],
         swDest: `${PUBLIC_PATH}/sw.js`,
-        runtimeCaching: [{
-            urlPattern: /\.(?:png|jpg|avif|svg)$/,
-            handler: 'CacheFirst',
-            options: {
-                cacheName: 'images',
-                expiration: {
-                    maxEntries: 30,
+        runtimeCaching: [
+            {
+                urlPattern: /\.(?:png|jpg|avif|svg)$/,
+                handler: 'CacheFirst',
+                options: {
+                    cacheName: 'images',
+                    expiration: {
+                        maxEntries: 30,
+                    },
                 },
             },
-        }],
+            {
+                urlPattern: /(\.(?:html))|(\/)$/,
+                handler: 'NetworkFirst',
+                options: {
+                    cacheName: 'articles',
+                    expiration: {
+                        maxEntries: 20,
+                    },
+                },
+            }
+        ],
         mode: 'production',
         skipWaiting: true,
         clientsClaim: true,

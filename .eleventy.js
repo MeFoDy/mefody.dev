@@ -163,7 +163,10 @@ module.exports = function(config) {
 
     config.addFilter('likesAndRepostsByUrl', function(webmentions, url) {
         const mentions = webmentions.filter((entry) => new URL(entry['wm-target']).pathname === url);
-        const likes = mentions.filter((entry) => ['like-of', 'bookmark-of'].includes(entry['wm-property']));
+        const likes = mentions.filter((entry) => [
+            'like-of',
+            'bookmark-of'
+        ].includes(entry['wm-property']));
         const reposts = mentions.filter((entry) => ['repost-of'].includes(entry['wm-property']));
 
         return {
@@ -173,7 +176,10 @@ module.exports = function(config) {
     });
 
     config.addFilter('webmentionsByUrl', function (webmentions, url) {
-        const allowedTypes = ['mention-of', 'in-reply-to'];
+        const allowedTypes = [
+            'mention-of',
+            'in-reply-to'
+        ];
         const allowedHTML = {
             allowedTags: [
                 'b',
@@ -272,7 +278,10 @@ module.exports = function(config) {
     config.addPlugin(require('eleventy-plugin-reading-time'));
 
     config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
-        templateFormats: ['njk', 'md'],
+        templateFormats: [
+            'njk',
+            'md'
+        ],
         trim: true,
     });
 
@@ -293,7 +302,8 @@ module.exports = function(config) {
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
         templateFormats: [
-            'md', 'njk'
+            'md',
+            'njk'
         ],
     };
 };
