@@ -95,17 +95,16 @@ You can make this hook much smarter like [here](https://github.com/aitemr/awesom
 
 Paste the following code to the `.git/hooks/post-checkout`.
 
-```bash
-#!/bin/bash
+```sh
+#!/bin/sh
 
 # .git/hooks/post-checkout
 
 PREV_COMMIT=$1
 POST_COMMIT=$2
 
-if [[ -f package-lock.json ]]; then
-    DIFF=`git diff --shortstat $PREV_COMMIT..$POST_COMMIT package-lock.json`
-    if [[ $DIFF != "" ]]; then
+if [ -f package-lock.json ]; then
+    if ! git diff --quiet $PREV_COMMIT..$POST_COMMIT -- package-lock.json; then
         echo "'package-lock.json' has been changed. Please, run 'npm ci' to update dependencies."
     fi
 fi
