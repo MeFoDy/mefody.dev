@@ -72,7 +72,7 @@ Check these projects to have inspiration:
 
 If your team decided to use task ids from the task tracker (JIRA, Wrike, whatever else) in commit messages, create a `prepare-commit-msg` file in the `.git/hooks` directory and paste the following code there.
 
-```bash
+```shell
 #!/bin/sh
 
 # .git/hooks/prepare-commit-msg
@@ -95,7 +95,7 @@ You can make this hook much smarter like [here](https://github.com/aitemr/awesom
 
 Paste the following code to the `.git/hooks/post-checkout`.
 
-```sh
+```shell
 #!/bin/sh
 
 # .git/hooks/post-checkout
@@ -118,7 +118,7 @@ It's a common pattern to have no direct commits to the `main` branch. Let your C
 
 Paste the following code to the `.git/hooks/pre-push`.
 
-```bash
+```shell
 #!/bin/sh
 
 # .git/hooks/pre-push
