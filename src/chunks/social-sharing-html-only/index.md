@@ -53,7 +53,7 @@ But this way requires `app_id`, so you have to register your Facebook app. Not
 ## VK
 
 ```html
-<a href="http://vk.com/share.php?url=https://mefody.dev" target="_blank">
+<a href="https://vk.com/share.php?url=https://mefody.dev" target="_blank">
     Share in VK
 </a>
 ```
