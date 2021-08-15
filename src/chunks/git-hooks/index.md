@@ -7,6 +7,7 @@ dateUpdated: Last Modified
 tags:
     - git
     - npm
+    - bash
     - chunk
 ---
 
@@ -187,7 +188,7 @@ To apply the config, run the following command.
 npx simple-git-hooks
 ```
 
-Don't forget to commit these changes to share the awesome automation with other contributors.
+**More:** [Git Hooks: share with your team](/chunks/git-hooks-share/)
 
 ## Conclusion
 
