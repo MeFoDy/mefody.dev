@@ -19,7 +19,8 @@
     "lint:css": "stylelint \"src/styles/**/*.css\"",
     "lint:editorconfig": "editorconfig-checker",
     "lint:js": "eslint .",
-    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js"
+    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js",
+    "prepare": "npx simple-git-hooks"
   },
   "devDependencies": {
     "@babel/core": "^7.12.0",
