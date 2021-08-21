@@ -1,0 +1,14 @@
+/* TEAM */
+	Author: Nikita Dubko
+	Contact: n.a.dubko [at] gmail.com
+	Twitter: @dark_mefody
+	From: Minsk, Belarus
+
+/* THANKS */
+	{CONTRIBUTORS}
+
+/* SITE */
+	Last update: {LAST_UPDATE}
+	Language: English
+	Doctype: HTML5
+	IDE: VS Code

@@ -7,8 +7,11 @@ const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const paths = require('vinyl-paths');
 const workboxBuild = require('workbox-build');
+const replace = require('gulp-replace');
+const execSync = require('child_process').execSync;
 
 const PUBLIC_PATH = '_public';
+const tty = process.platform === 'win32' ? 'CON' : '/dev/tty';
 
 // Styles
 
@@ -127,13 +130,40 @@ gulp.task('cache', gulp.series(
     'cache:replace',
 ));
 
+gulp.task('humans', () => {
+    const contributors = execSync('git shortlog -sne < ' + tty).toString();
+    const myEmails = [
+        'n.a.dubko@gmail.com',
+        'mefody@yandex-team.ru',
+        'mefody93@gmail.com',
+    ];
+    const contributorsNames = contributors
+        .split('\n')
+        .filter(Boolean)
+        .filter(line => !myEmails.some(myEmail => line.includes(myEmail)))
+        .map(contributorLine => {
+            const info = contributorLine.split('\t')[1];
+            const name = info.split(' <')[0];
+            return name;
+        });
+    const date = new Date();
+
+    return gulp
+        .src(`${PUBLIC_PATH}/humans.txt`)
+        .pipe(replace('{LAST_UPDATE}', date.toISOString()))
+        .pipe(replace('{CONTRIBUTORS}', contributorsNames.join('\n\t')))
+        .pipe(gulp.dest(PUBLIC_PATH));
+});
 
 // Build
 
-gulp.task('build', gulp.series(
-    'styles',
-    'scripts',
-    'clean',
-    'cache',
-    'service-worker',
+gulp.task('build', gulp.parallel(
+    gulp.series(
+        'styles',
+        'scripts',
+        'clean',
+        'cache',
+        'service-worker',
+    ),
+    'humans',
 ));
