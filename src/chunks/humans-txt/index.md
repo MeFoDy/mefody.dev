@@ -36,10 +36,11 @@ Also, I found a lot of websites that already use the file in different ways.
 
 ## Automation
 
-I want to keep the section `/* THANKS */` with the list of all contributors actual. So I've added some automation to update the list on every build:
+I want to keep the section `/* THANKS */` with the list of all contributors actual. So I've added some automation to update the list on every local build:
 
 1. Get data from `git shortlog -sne`. `s` is for summary only, `e` is for contributors emails, `n` is for the number of commits.
 2. Remove contributors with my emails from the list.
+3. Save the list to data file.
 3. Put the list to `humans.txt` on every build.
 
 [Source code](https://github.com/MeFoDy/mefody.dev/blob/main/gulpfile.js).

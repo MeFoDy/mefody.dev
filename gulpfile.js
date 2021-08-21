@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
@@ -9,8 +11,10 @@ const paths = require('vinyl-paths');
 const workboxBuild = require('workbox-build');
 const replace = require('gulp-replace');
 const execSync = require('child_process').execSync;
+const fs = require('fs');
 
 const PUBLIC_PATH = '_public';
+const SRC_PATH = 'src';
 const tty = process.platform === 'win32' ? 'CON' : '/dev/tty';
 
 // Styles
@@ -130,7 +134,12 @@ gulp.task('cache', gulp.series(
     'cache:replace',
 ));
 
-gulp.task('humans', () => {
+gulp.task('contributors:get', () => {
+    // Get new contributors only on local build
+    if (process.env.ELEVENTY_ENV === 'production') {
+        return new Promise(resolve => resolve());
+    }
+
     const contributors = execSync('git shortlog -sne < ' + tty).toString();
     const myEmails = [
         'n.a.dubko@gmail.com',
@@ -146,12 +155,22 @@ gulp.task('humans', () => {
             const name = info.split(' <')[0];
             return name;
         });
+
+    return new Promise(resolve => {
+        fs.writeFileSync(`${SRC_PATH}/data/contributors.json`, JSON.stringify(contributorsNames));
+
+        resolve();
+    });
+});
+
+gulp.task('humans:generate', () => {
+    const contributors = JSON.parse(fs.readFileSync(`${SRC_PATH}/data/contributors.json`));
     const date = new Date();
 
     return gulp
         .src(`${PUBLIC_PATH}/humans.txt`)
         .pipe(replace('{LAST_UPDATE}', date.toISOString()))
-        .pipe(replace('{CONTRIBUTORS}', contributorsNames.join('\n\t')))
+        .pipe(replace('{CONTRIBUTORS}', contributors.join('\n\t')))
         .pipe(gulp.dest(PUBLIC_PATH));
 });
 
@@ -165,5 +184,8 @@ gulp.task('build', gulp.parallel(
         'cache',
         'service-worker',
     ),
-    'humans',
+    gulp.series(
+        'contributors:get',
+        'humans:generate',
+    )
 ));

@@ -13,3 +13,6 @@ indent_size = 2
 
 [*.txt]
 indent_size = off
+
+[src/data/contributors.json]
+insert_final_newline = false
