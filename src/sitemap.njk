@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+excludeFromSitemap: true
+---
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>{{ site.paths.site }}/chunks/</loc>
+        <lastmod>{{ (collections.chunk | getLastArticle)["date"] | isoDate }}</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>{{ site.paths.site }}/talks/</loc>
+        <lastmod>{{ (talks | prepareTalks | last)["date"] | isoDate }}</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    {%- for item in collections.all %}
+        {%- if not item.data.excludeFromSitemap %}
+        <url>
+            <loc>{{ site.paths.site }}{{ item.url }}</loc>
+            <lastmod>{{ item.date | isoDate }}</lastmod>
+        </url>
+        {%- endif %}
+    {%- endfor %}
+</urlset>

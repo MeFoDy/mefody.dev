@@ -65,7 +65,7 @@ module.exports = function(config) {
     }
 
     config.addFilter('getLastArticle', (array) => {
-        const articles = sortByDate(array).reverse();
+        const articles = sortByDate(array);
 
         return articles[articles.length - 1];
     });
@@ -240,6 +240,10 @@ module.exports = function(config) {
 
     config.addFilter('dateFromISO', (date) => {
         return new Date(date);
+    });
+
+    config.addFilter('isoDate', (date) => {
+        return new Date(date).toISOString().substring(0, 10);
     });
 
     // Transforms
