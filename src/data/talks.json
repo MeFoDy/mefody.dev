@@ -444,7 +444,22 @@
           "conference": "HolyJS 2021 Piter",
           "conferenceLink": "https://holyjs-piter.ru/2021/spb/talks/tmkqe8lssoof7j1fspsgc/",
           "date": "2021-04-20",
-          "language": "ru"
+          "language": "ru",
+          "video": "https://youtu.be/gzPKR27PMTQ"
+        }
+      ]
+    },
+    {
+      "title": "Управление воспроизведением в PWA",
+      "description": "Когда вы слушаете любимую песню или новый эпизод подкаста в нативном приложении, вполне привычно управлять воспроизведением через виджеты операционной системы, мультимедиа-клавишами на клавиатуре или даже «умными» часами. Можно ли сделать так же внутри PWA?",
+      "versions": [
+        {
+          "slides": "playback-control/",
+          "conference": "GDG Minsk Web August Meetup",
+          "conferenceLink": "https://gdg-minsk.timepad.ru/event/1735573/",
+          "date": "2021-08-24",
+          "language": "ru",
+          "video": "https://www.youtube.com/watch?v=GdxlnUdsgtU"
         }
       ]
     }
