@@ -54,16 +54,16 @@ So, let’s try to use it.
 
 ```html
 <ul>
-    <li>&#x2764; can be rendered differently.</li>
-    <li>&#x2764;&#xFE0F; should look like a heart emoji.</li>
-    <li>&#x2764;&#xFE0E; should look like a heart text symbol.</li>
+    <li>&#x2600; can be rendered differently.</li>
+    <li>&#x2600;&#xFE0F; should look like a sun emoji.</li>
+    <li>&#x2600;&#xFE0E; should look like a sun text symbol.</li>
 </ul>
 ```
 
 <ul>
-    <li>&#x2764; can be rendered differently.</li>
-    <li>&#x2764;&#xFE0F; should look like a heart emoji.</li>
-    <li>&#x2764;&#xFE0E; should look like a heart text symbol.</li>
+    <li>&#x2600; can be rendered differently.</li>
+    <li>&#x2600;&#xFE0F; should look like a sun emoji.</li>
+    <li>&#x2600;&#xFE0E; should look like a sun text symbol.</li>
 </ul>
 
 So, if you need to disable emoji in your text, convert the symbol to UTF-8 or UTF-16 sequence (`symbol.codePointAt(0).toString(16)`), than add `&#xFE0E` to it.
@@ -71,6 +71,8 @@ So, if you need to disable emoji in your text, convert the symbol to UTF-8 
 ```html
 <span>I &#x2764;&#xFE0E; Frontend</span>
 ```
+
+But it won’t work for the heart emoji on Android. I don’t know why. When we tested it last year, it was ok, but... You can play around with different emojis [in this sandbox](https://codepen.io/dark_mefody/pen/NWgMxrd). As for me, something is better than nothing.
 
 ## Accessibility
 
