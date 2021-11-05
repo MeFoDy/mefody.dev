@@ -473,6 +473,13 @@
           "conferenceLink": "https://rndtech.pro/",
           "date": "2021-09-04",
           "language": "ru"
+        },
+        {
+          "slides": "web-future/404.html",
+          "conference": "404fest X",
+          "conferenceLink": "https://2021.404fest.ru/",
+          "date": "2021-09-25",
+          "language": "ru"
         }
       ]
     },
@@ -498,6 +505,20 @@
           "conference": "Х5 Tech Природа Кода",
           "conferenceLink": "https://prirodacodax5.tech/",
           "date": "2021-09-11",
+          "language": "ru",
+          "video": "https://youtu.be/In_BmRwn9k4"
+        }
+      ]
+    },
+    {
+      "title": "Картинки со звуком",
+      "description": "Иногда хочется сделать что-нибудь странное: съесть мороженое с перцем, добавить в кофе огуречный сироп, сохранить MP3 в формате JPEG... С последнего и началось погружение Никиты в удивительный мир записи звука в визуальном виде с попыткой реализовать в браузере свой музыкальный проигрыватель для картинок.",
+      "versions": [
+        {
+          "slides": "img-with-sound/",
+          "conference": "HolyJS 2021 Moscow",
+          "conferenceLink": "https://holyjs-moscow.ru/",
+          "date": "2021-11-04",
           "language": "ru"
         }
       ]
