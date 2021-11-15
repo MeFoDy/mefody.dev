@@ -26,13 +26,13 @@ When we make our websites comfortable for people with disabilities, we make th
 
 ## How can people use your site?
 
-— *With a screenreader.* The website is voiced by a screenreader. It’s useful for blinded people.
-— *With keyboard.* There is a possibility to use website without mouse, using <kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>Space</kbd> and arrows. It’s useful for people with locomotor system disabilities or somebody who just want to use a keyboard.
-— *With a mouse.* It’s useful for people who can’t use a keyboard.
-— *With zoom.* Just because I have poor eyesight.
-— *With contrast.* For people with color blindness.
-— *Without animations.* For people with epilepsy.
-— *With left hand.* For left-handed persons.
+- *With a screenreader.* The website is voiced by a screenreader. It’s useful for blinded people.
+- *With keyboard.* There is a possibility to use website without mouse, using <kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>Space</kbd> and arrows. It’s useful for people with locomotor system disabilities or somebody who just want to use a keyboard.
+- *With a mouse.* It’s useful for people who can’t use a keyboard.
+- *With zoom.* Just because I have poor eyesight.
+- *With contrast.* For people with color blindness.
+- *Without animations.* For people with epilepsy.
+- *With left hand.* For left-handed persons.
 
 ## How to make the component accessible?
 
