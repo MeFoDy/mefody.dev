@@ -480,6 +480,13 @@
           "conferenceLink": "https://2021.404fest.ru/",
           "date": "2021-09-25",
           "language": "ru"
+        },
+        {
+          "slides": "web-future/merge.html",
+          "conference": "Merge",
+          "conferenceLink": "https://mergeconf.ru/",
+          "date": "2021-11-13",
+          "language": "ru"
         }
       ]
     },
