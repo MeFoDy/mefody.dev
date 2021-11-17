@@ -20,32 +20,38 @@ const tty = process.platform === 'win32' ? 'CON' : '/dev/tty';
 // Styles
 
 gulp.task('styles', () => {
-    return gulp.src(`${PUBLIC_PATH}/styles/{styles,dark}.css`)
-        .pipe(postcss([
-            require('postcss-import'),
-            require('postcss-color-hex-alpha'),
-            require('autoprefixer')({ grid: 'autoplace' }),
-            require('postcss-csso'),
-        ]))
+    return gulp
+        .src(`${PUBLIC_PATH}/styles/{styles,dark}.css`)
+        .pipe(
+            postcss([
+                require('postcss-import'),
+                require('postcss-color-hex-alpha'),
+                require('autoprefixer')({ grid: 'autoplace' }),
+                require('postcss-csso'),
+            ]),
+        )
         .pipe(gulp.dest(`${PUBLIC_PATH}/styles`));
 });
 
 // Scripts
 
 gulp.task('scripts', () => {
-    return gulp.src(`${PUBLIC_PATH}/scripts/*.js`)
-        .pipe(babel({
-            presets: [
-                [
-                    '@babel/preset-env',
-                    {
-                        targets: {
-                            esmodules: true,
+    return gulp
+        .src(`${PUBLIC_PATH}/scripts/*.js`)
+        .pipe(
+            babel({
+                presets: [
+                    [
+                        '@babel/preset-env',
+                        {
+                            targets: {
+                                esmodules: true,
+                            },
                         },
-                    }
+                    ],
                 ],
-            ]
-        }))
+            }),
+        )
         .pipe(terser())
         .pipe(gulp.dest(`${PUBLIC_PATH}/scripts`));
 });
@@ -64,15 +70,19 @@ gulp.task('clean', () => {
 // Cache
 
 gulp.task('cache:hash', () => {
-    return gulp.src([
-        `${PUBLIC_PATH}/fonts/*.woff2`,
-        `${PUBLIC_PATH}/images/**/*.{svg,png,jpg,avif}`,
-        `${PUBLIC_PATH}/scripts/*.js`,
-        `${PUBLIC_PATH}/styles/*.css`,
-        `${PUBLIC_PATH}/manifest.webmanifest`,
-    ], {
-        base: PUBLIC_PATH
-    })
+    return gulp
+        .src(
+            [
+                `${PUBLIC_PATH}/fonts/*.woff2`,
+                `${PUBLIC_PATH}/images/**/*.{svg,png,jpg,avif}`,
+                `${PUBLIC_PATH}/scripts/*.js`,
+                `${PUBLIC_PATH}/styles/*.css`,
+                `${PUBLIC_PATH}/manifest.webmanifest`,
+            ],
+            {
+                base: PUBLIC_PATH,
+            },
+        )
         .pipe(paths(del))
         .pipe(rev())
         .pipe(gulp.dest(PUBLIC_PATH))
@@ -86,19 +96,18 @@ gulp.task('cache:replace', () => {
             `${PUBLIC_PATH}/**/*.{html,css}`,
             `${PUBLIC_PATH}/manifest-*.webmanifest`,
         ])
-        .pipe(revRewrite({
-            manifest: gulp.src(`${PUBLIC_PATH}/rev.json`)
-        }))
+        .pipe(
+            revRewrite({
+                manifest: fs.readFileSync(`${PUBLIC_PATH}/rev.json`),
+            }),
+        )
         .pipe(gulp.dest(PUBLIC_PATH));
 });
 
 gulp.task('service-worker', () => {
     return workboxBuild.generateSW({
         globDirectory: PUBLIC_PATH,
-        globPatterns: [
-            '**/*.{js,css,webmanifest,ico,woff2}',
-            '**/404.html',
-        ],
+        globPatterns: ['**/*.{js,css,webmanifest,ico,woff2}', '**/404.html'],
         swDest: `${PUBLIC_PATH}/sw.js`,
         runtimeCaching: [
             {
@@ -120,7 +129,7 @@ gulp.task('service-worker', () => {
                         maxEntries: 20,
                     },
                 },
-            }
+            },
         ],
         mode: 'production',
         skipWaiting: true,
@@ -129,15 +138,12 @@ gulp.task('service-worker', () => {
     });
 });
 
-gulp.task('cache', gulp.series(
-    'cache:hash',
-    'cache:replace',
-));
+gulp.task('cache', gulp.series('cache:hash', 'cache:replace'));
 
 gulp.task('contributors:get', () => {
     // Get new contributors only on local build
     if (process.env.ELEVENTY_ENV === 'production') {
-        return new Promise(resolve => resolve());
+        return new Promise((resolve) => resolve());
     }
 
     const contributors = execSync('git shortlog -sne < ' + tty).toString();
@@ -149,22 +155,27 @@ gulp.task('contributors:get', () => {
     const contributorsNames = contributors
         .split('\n')
         .filter(Boolean)
-        .filter(line => !myEmails.some(myEmail => line.includes(myEmail)))
-        .map(contributorLine => {
+        .filter((line) => !myEmails.some((myEmail) => line.includes(myEmail)))
+        .map((contributorLine) => {
             const info = contributorLine.split('\t')[1];
             const name = info.split(' <')[0];
             return name;
         });
 
-    return new Promise(resolve => {
-        fs.writeFileSync(`${SRC_PATH}/data/contributors.json`, JSON.stringify(contributorsNames));
+    return new Promise((resolve) => {
+        fs.writeFileSync(
+            `${SRC_PATH}/data/contributors.json`,
+            JSON.stringify(contributorsNames),
+        );
 
         resolve();
     });
 });
 
 gulp.task('humans:generate', () => {
-    const contributors = JSON.parse(fs.readFileSync(`${SRC_PATH}/data/contributors.json`));
+    const contributors = JSON.parse(
+        fs.readFileSync(`${SRC_PATH}/data/contributors.json`),
+    );
     const date = new Date();
 
     return gulp
@@ -176,16 +187,10 @@ gulp.task('humans:generate', () => {
 
 // Build
 
-gulp.task('build', gulp.parallel(
-    gulp.series(
-        'styles',
-        'scripts',
-        'clean',
-        'cache',
-        'service-worker',
+gulp.task(
+    'build',
+    gulp.parallel(
+        gulp.series('styles', 'scripts', 'clean', 'cache', 'service-worker'),
+        gulp.series('contributors:get', 'humans:generate'),
     ),
-    gulp.series(
-        'contributors:get',
-        'humans:generate',
-    )
-));
+);

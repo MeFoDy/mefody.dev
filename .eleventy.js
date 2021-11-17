@@ -1,13 +1,17 @@
 const fs = require('fs');
 const sanitizeHTML = require('sanitize-html');
 
-module.exports = function(config) {
-    config.addPassthroughCopy({'src/images/favicon/favicon.ico': 'favicon.ico'});
+module.exports = function (config) {
+    config.addPassthroughCopy({
+        'src/images/favicon/favicon.ico': 'favicon.ico',
+    });
     config.addPassthroughCopy('src/manifest.webmanifest');
     config.addPassthroughCopy('src/fonts/*.woff2');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)');
+    config.addPassthroughCopy(
+        'src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)',
+    );
     config.addPassthroughCopy('src/(robots|humans).txt');
 
     // Collections
@@ -28,8 +32,8 @@ module.exports = function(config) {
         return [...set].sort();
     });
 
-    config.addCollection('withTags', function(collectionApi) {
-        return collectionApi.getAll().filter(function(item) {
+    config.addCollection('withTags', function (collectionApi) {
+        return collectionApi.getAll().filter(function (item) {
             return 'tags' in item.data;
         });
     });
@@ -52,7 +56,7 @@ module.exports = function(config) {
             'September',
             'October',
             'November',
-            'December'
+            'December',
         ];
         const monthIndex = d.getMonth();
         const monthName = months[monthIndex];
@@ -61,7 +65,9 @@ module.exports = function(config) {
     });
 
     function sortByDate(array, dateField = 'date') {
-        return [...array].sort((a, b) => a[dateField].getTime() - b[dateField].getTime());
+        return [...array].sort(
+            (a, b) => a[dateField].getTime() - b[dateField].getTime(),
+        );
     }
 
     config.addFilter('getLastArticle', (array) => {
@@ -85,16 +91,16 @@ module.exports = function(config) {
     });
 
     config.addFilter('filterTags', (array) => {
-        return array.filter(tag => tag !== 'chunk');
+        return array.filter((tag) => tag !== 'chunk');
     });
 
     config.addFilter('prepareTalks', (data) => {
         const talks = data.talks;
 
-        talks.forEach(talk => {
+        talks.forEach((talk) => {
             let lastDate = new Date('1970-01-01');
 
-            talk.versions.forEach(version => {
+            talk.versions.forEach((version) => {
                 version.dateObj = new Date(version.date);
 
                 if (version.dateObj.getTime() > lastDate.getTime()) {
@@ -104,7 +110,6 @@ module.exports = function(config) {
                 version.slidesLink = version.slides.startsWith('https:')
                     ? version.slides
                     : data.pathPrefix + version.slides;
-
             });
 
             talk.date = lastDate;
@@ -116,7 +121,7 @@ module.exports = function(config) {
     config.addFilter('preparePodcasts', (data) => {
         const podcasts = data.podcasts;
 
-        podcasts.forEach(podcast => {
+        podcasts.forEach((podcast) => {
             podcast.dateObj = new Date(podcast.date);
         });
 
@@ -124,7 +129,8 @@ module.exports = function(config) {
     });
 
     config.addFilter('prepareRSS', (content) => {
-        const reg = /(src="\.\/)|(src="[^(https://)])|(src="\/)|(href="\.\/)|(href="[^(https://)])|(href="\/)/g;
+        const reg =
+            /(src="\.\/)|(src="[^(https://)])|(src="\/)|(href="\.\/)|(href="[^(https://)])|(href="\/)/g;
         const prefix = 'https://mefody.dev' + content.url;
         return content.templateContent.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
@@ -140,12 +146,16 @@ module.exports = function(config) {
     });
 
     config.addFilter('filterCollection', (array, tag) => {
-        if (!tag) {return array;}
+        if (!tag) {
+            return array;
+        }
 
-        return array.filter(item => 'tags' in item.data && item.data.tags.includes(tag));
+        return array.filter(
+            (item) => 'tags' in item.data && item.data.tags.includes(tag),
+        );
     });
 
-    config.addFilter('isCyrillic', function(input) {
+    config.addFilter('isCyrillic', function (input) {
         return /[а-яА-ЯЁё]/.test(input);
     });
 
@@ -161,13 +171,16 @@ module.exports = function(config) {
         return authorUrl && urls.includes(authorUrl);
     });
 
-    config.addFilter('likesAndRepostsByUrl', function(webmentions, url) {
-        const mentions = webmentions.filter((entry) => new URL(entry['wm-target']).pathname === url);
-        const likes = mentions.filter((entry) => [
-            'like-of',
-            'bookmark-of'
-        ].includes(entry['wm-property']));
-        const reposts = mentions.filter((entry) => ['repost-of'].includes(entry['wm-property']));
+    config.addFilter('likesAndRepostsByUrl', function (webmentions, url) {
+        const mentions = webmentions.filter(
+            (entry) => new URL(entry['wm-target']).pathname === url,
+        );
+        const likes = mentions.filter((entry) =>
+            ['like-of', 'bookmark-of'].includes(entry['wm-property']),
+        );
+        const reposts = mentions.filter((entry) =>
+            ['repost-of'].includes(entry['wm-property']),
+        );
 
         return {
             likes: likes.length,
@@ -176,22 +189,12 @@ module.exports = function(config) {
     });
 
     config.addFilter('webmentionsByUrl', function (webmentions, url) {
-        const allowedTypes = [
-            'mention-of',
-            'in-reply-to'
-        ];
+        const allowedTypes = ['mention-of', 'in-reply-to'];
         const allowedHTML = {
-            allowedTags: [
-                'b',
-                'i',
-                'em',
-                'strong',
-                'a',
-                'code',
-            ],
+            allowedTags: ['b', 'i', 'em', 'strong', 'a', 'code'],
             allowedAttributes: {
-                a: ['href']
-            }
+                a: ['href'],
+            },
         };
 
         const orderByDate = (a, b) =>
@@ -226,17 +229,21 @@ module.exports = function(config) {
             .map(clean);
     });
 
-    config.addFilter('webmentionCountByType', function (webmentions, url, ...types) {
-        const isUrlMatch = (entry) =>
-            entry['wm-target'] === url ||
-            entry['wm-target'] === url.replace('mxb.dev', 'mxb.at');
+    config.addFilter(
+        'webmentionCountByType',
+        function (webmentions, url, ...types) {
+            const isUrlMatch = (entry) =>
+                entry['wm-target'] === url ||
+                entry['wm-target'] === url.replace('mxb.dev', 'mxb.at');
 
-        return String(
-            webmentions
-                .filter(isUrlMatch)
-                .filter((entry) => types.includes(entry['wm-property'])).length
-        );
-    });
+            return String(
+                webmentions
+                    .filter(isUrlMatch)
+                    .filter((entry) => types.includes(entry['wm-property']))
+                    .length,
+            );
+        },
+    );
 
     config.addFilter('dateFromISO', (date) => {
         return new Date(date);
@@ -252,20 +259,21 @@ module.exports = function(config) {
 
     config.addTransform('xmlmin', require('./_11ty/transforms/xmlmin'));
 
-
     // BrowserSync config
 
     config.setBrowserSyncConfig({
         callbacks: {
-            ready: function(err, bs) {
+            ready: function (err, bs) {
                 bs.addMiddleware('*', (req, res) => {
                     const content_404 = fs.readFileSync('_public/404.html');
-                    res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
+                    res.writeHead(404, {
+                        'Content-Type': 'text/html; charset=UTF-8',
+                    });
                     res.write(content_404);
                     res.end();
                 });
-            }
-        }
+            },
+        },
     });
 
     // Markdown config
@@ -282,10 +290,7 @@ module.exports = function(config) {
     config.addPlugin(require('eleventy-plugin-reading-time'));
 
     config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
-        templateFormats: [
-            'njk',
-            'md'
-        ],
+        templateFormats: ['njk', 'md'],
         trim: true,
     });
 
@@ -305,9 +310,6 @@ module.exports = function(config) {
         markdownTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
-        templateFormats: [
-            'md',
-            'njk'
-        ],
+        templateFormats: ['md', 'njk'],
     };
 };

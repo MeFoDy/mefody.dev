@@ -33,13 +33,6 @@
     "no-template-curly-in-string": [
       "error"
     ],
-    "array-element-newline": [
-      "error",
-      {
-        "multiline": true,
-        "minItems": 2
-      }
-    ],
     "require-await": "error",
     "no-return-await": "error",
     "no-multi-spaces": "error",
