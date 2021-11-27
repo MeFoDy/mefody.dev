@@ -529,6 +529,33 @@
           "language": "ru"
         }
       ]
+    },
+    {
+      "title": "Explore new web features before everyone else",
+      "description": "Web Platform is developing fast. Too fast. Yesterday I used table layouts to make my website pixel perfect. Today I use flexbox and grid to make it adaptive. Tomorrow I will use cascading layers and container queries to be on the edge of technology. But where can I find the info about all the new features available? Where can I look to the future?",
+      "versions": [
+        {
+          "slides": "web-future/js-congress.html",
+          "conference": "We Are Developers: JavaScript Congress ’21",
+          "conferenceLink": "https://www.wearedevelopers.com/javascript-congress",
+          "date": "2021-11-24",
+          "language": "en",
+          "video": "https://youtu.be/0Ln2ZORV_20"
+        }
+      ]
+    },
+    {
+      "title": "Open Graph для тех, кто не хочет думать",
+      "description": "Чтобы на сайт перешли из социальной сети, у него просто обязана быть красивая превьюшка. Как сделать так, чтобы один раз что-то настроить, а превьюшки всегда были красивыми — поговорим в докладе.",
+      "versions": [
+        {
+          "slides": "lazy-og/",
+          "conference": "Fwdays: JS is back!",
+          "conferenceLink": "https://fwdays.com/event/js-autumn-fwdays-2021",
+          "date": "2021-11-27",
+          "language": "ru"
+        }
+      ]
     }
   ],
   "podcasts": [
