@@ -554,6 +554,13 @@
           "conferenceLink": "https://fwdays.com/event/js-autumn-fwdays-2021",
           "date": "2021-11-27",
           "language": "ru"
+        },
+        {
+          "slides": "lazy-og/yamal.html",
+          "conference": "YAMAL.DEV CONF",
+          "conferenceLink": "https://yamal.dev/",
+          "date": "2021-12-18",
+          "language": "ru"
         }
       ]
     }
