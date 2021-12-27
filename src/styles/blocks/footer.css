@@ -38,6 +38,7 @@
 }
 
 .footer__social-list {
+    min-width: max-content;
     margin: 0;
     padding: 0;
     list-style: none;

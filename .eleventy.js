@@ -233,8 +233,7 @@ module.exports = function (config) {
         'webmentionCountByType',
         function (webmentions, url, ...types) {
             const isUrlMatch = (entry) =>
-                entry['wm-target'] === url ||
-                entry['wm-target'] === url.replace('mxb.dev', 'mxb.at');
+                entry['wm-target'] === url;
 
             return String(
                 webmentions
