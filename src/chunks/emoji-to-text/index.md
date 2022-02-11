@@ -4,6 +4,7 @@ description: Sometimes you need to disable some text glyphs to be rendered as
 cover: images/cover.jpg
 date: 2021-09-19
 dateUpdated: Last Modified
+ctf: '{flag_emojis_are_awesome}'
 tags:
     - html
     - css
