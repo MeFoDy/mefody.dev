@@ -428,9 +428,16 @@
       "versions": [
         {
           "slides": "speakerpunk-2021/",
-          "conference": "Women Developer Academy by Google",
+          "conference": "Women Developer Academy 2021 by Google",
           "conferenceLink": "https://habr.com/ru/company/google/blog/545184/",
           "date": "2021-02-16",
+          "language": "ru"
+        },
+        {
+          "slides": "speakerpunk-2022/",
+          "conference": "Women Developer Academy 2022 by Google",
+          "conferenceLink": "https://habr.com/ru/company/google/blog/545184/",
+          "date": "2022-02-15",
           "language": "ru"
         }
       ]
@@ -564,6 +571,26 @@
           "video": "https://www.youtube.com/watch?v=ZkYDjQXTkIk"
         }
       ]
+    },
+    {
+      "title": "WebHID API: Control Everything via USB",
+      "description": "Operational System allows controlling different devices using Human Interface Device protocol for a long time. With WebHID API you can do the same right from the browser. Let’s talk about the protocol features and limitations. We’ll try to connect some devices to the laptop and control them with JavaScript.",
+      "versions": [
+        {
+          "slides": "webhid/",
+          "conference": "JSNation 2022",
+          "conferenceLink": "https://jsnation.com/",
+          "date": "2022-06-20",
+          "language": "en"
+        },
+        {
+          "slides": "webhid/holyjs.html",
+          "conference": "HolyJS 2022 Spring",
+          "conferenceLink": "https://holyjs.ru/",
+          "date": "2022-06-23",
+          "language": "ru"
+        }
+      ]
     }
   ],
   "podcasts": [
@@ -649,6 +676,12 @@
       "name": "Критерии качества вёрстки: круглый стол с Никитой Дубко и Алексеем Авдеевым",
       "podcastLink": "https://www.youtube.com/watch?v=jADCbKt-ViU",
       "date": "2021-09-16",
+      "lang": "ru"
+    },
+    {
+      "name": "Frontend Weekend #121 – Что изменилось у Никиты Дубко (Веб-Стандарты, GDE и развитие личного бренда)",
+      "podcastLink": "https://youtu.be/6Gx_nP2u-jU",
+      "date": "2022-04-16",
       "lang": "ru"
     }
   ]
