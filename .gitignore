@@ -1,6 +1,7 @@
 node_modules
 _public
 _cache
+.cache
 
 # misc
 .DS_Store

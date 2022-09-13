@@ -33,6 +33,20 @@ gulp.task('styles', () => {
         .pipe(gulp.dest(`${PUBLIC_PATH}/styles`));
 });
 
+gulp.task('styles:projects', () => {
+    return gulp
+        .src(`${PUBLIC_PATH}/projects/**/*.css`)
+        .pipe(
+            postcss([
+                require('postcss-import'),
+                require('postcss-color-hex-alpha'),
+                require('autoprefixer')({ grid: 'autoplace' }),
+                require('postcss-csso'),
+            ]),
+        )
+        .pipe(gulp.dest(`${PUBLIC_PATH}/projects`));
+});
+
 // Scripts
 
 gulp.task('scripts', () => {
@@ -190,7 +204,7 @@ gulp.task('humans:generate', () => {
 gulp.task(
     'build',
     gulp.parallel(
-        gulp.series('styles', 'scripts', 'clean', 'cache', 'service-worker'),
+        gulp.series('styles', 'styles:projects', 'scripts', 'clean', 'cache', 'service-worker'),
         gulp.series('contributors:get', 'humans:generate'),
     ),
 );

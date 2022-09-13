@@ -23,3 +23,8 @@
     baseUrl = "https://mefody.dev"
     feedPath = "/feed/rss.xml"
     limit = 3
+
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = [ ".cache" ]
