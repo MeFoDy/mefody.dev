@@ -9,7 +9,6 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/fonts/*.woff2');
     config.addPassthroughCopy('src/styles');
     config.addPassthroughCopy('src/scripts');
-    config.addPassthroughCopy('src/projects/**/*.css');
     config.addPassthroughCopy(
         'src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)',
     );
