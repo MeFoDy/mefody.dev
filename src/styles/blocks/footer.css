@@ -39,37 +39,6 @@
 
 .footer__social-list {
     min-width: max-content;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer__social-link::before {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin-right: 0.25em;
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    content: '';
-}
-
-.footer__social-link--twitter::before {
-    background-image: url('/images/twitter-logo.svg');
-}
-
-.footer__social-link--github::before {
-    background-image: url('/images/github-logo.svg');
-}
-
-.footer__social-link--linkedin::before {
-    background-image: url('/images/linkedin-logo.svg');
-}
-
-.footer__social-link--rss::before {
-    background-image: url('/images/rss-logo.svg');
 }
 
 .footer__technologies {

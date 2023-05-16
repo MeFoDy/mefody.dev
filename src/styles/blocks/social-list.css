@@ -1,0 +1,38 @@
+.social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-list__link {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.social-list__link::before {
+    --social-icon-size: 1em;
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+    background-image: var(--social-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: '';
+}
+
+.social-list__link--twitter::before {
+    --social-icon: url('/images/twitter-logo.svg');
+}
+
+.social-list__link--github::before {
+    --social-icon: url('/images/github-logo.svg');
+}
+
+.social-list__link--linkedin::before {
+    --social-icon: url('/images/linkedin-logo.svg');
+}
+
+.social-list__link--rss::before {
+    --social-icon: url('/images/rss-logo.svg');
+}
