@@ -5,7 +5,7 @@
 }
 
 .social-list__link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.25em;
 }
