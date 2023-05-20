@@ -67,7 +67,16 @@ h2.collection__item-title {
 }
 
 .collection__item-tags {
-    font-size: 0.75em;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.collection__tag {
+    margin-right: 0.5em;
+}
+
+.collection__tag:last-child {
+    margin-right: 0;
 }
 
 @media (max-width: 1000px) {

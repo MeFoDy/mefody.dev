@@ -17,11 +17,9 @@ layout: page.njk
                 <div class="collection__item-meta">
                     <time class="collection__item-datetime" datetime="{{ item.date.toISOString() }}">{{ item.date | readableDate }}</time>
                     <div class="collection__item-minutes-to-read">{{ item.templateContent | readingTime({speed: 200}) }} to read</div>
-                    <div class="collection__item-tags tags">
+                    <div class="collection__item-tags">
                         {%- for tag in item.data.tags | filterTags -%}
-                            <span class="tags__item">
-                                <a href="/tags/{{ tag }}/">#{{ tag }}</a>
-                            </span>
+                            <a class="collection__tag tag" href="/tags/{{ tag }}/">#{{ tag }}</a>
                         {%- endfor -%}
                     </div>
                 </div>

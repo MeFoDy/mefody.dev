@@ -1,0 +1,19 @@
+.tag {
+    --tag-space-x: 0.5em;
+    --tag-bg: var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    padding-right: var(--tag-space-x);
+    padding-left: var(--tag-space-x);
+    color: var(--color-text);
+    font-size: 0.75em;
+    text-decoration: none;
+    background-color: var(--tag-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 1em;
+}
+
+.tag:hover,
+.tag:focus {
+    --tag-bg: var(--color-accent-alpha);
+}
