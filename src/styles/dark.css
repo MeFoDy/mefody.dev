@@ -34,8 +34,8 @@
     filter: invert(1);
 }
 
-.footer__social-link--github::before {
-    background-image: url('/images/github-logo-light.svg');
+.social-list__link--github::before {
+    --social-icon: url('/images/github-logo-light.svg');
 }
 
 .talks__talk-links a::before {
