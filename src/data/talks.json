@@ -486,6 +486,7 @@
           "conference": "404fest X",
           "conferenceLink": "https://2021.404fest.ru/",
           "date": "2021-09-25",
+          "video": "https://www.youtube.com/watch?v=tSgDvayX3uo",
           "language": "ru"
         },
         {
@@ -590,6 +591,119 @@
           "date": "2022-06-23",
           "language": "ru",
           "transcription": "https://habr.com/ru/company/jugru/blog/685534/"
+        }
+      ]
+    },
+    {
+      "title": "Ускоряем Cycle Time и растим счастье в команде",
+      "description": "Личная история, во время которой удалось ускорить командное время от взятия задачи в работу до попадания её артефактов в продакшен в 2 раза. О том, куда и зачем смотреть, что менять и как при этом не мучить команду бесполезной рутиной, а сделать её счастливее.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/i/vw23L4SXKR2qnA",
+          "conference": "Saint TeamLead Conf 2022",
+          "conferenceLink": "https://teamleadconf.ru/spb/2022/",
+          "video": "https://youtu.be/GmUMA-avfyQ",
+          "date": "2022-09-27",
+          "language": "ru",
+          "transcription": "https://habr.com/ru/companies/yandex/articles/715644/"
+        }
+      ]
+    },
+    {
+      "title": "Project Fugu. Is it edible?",
+      "description": "Imagine that you have all the APIs that iOS and Android developers have. Not inside a WebView, but on your web page. Project Fugu is an initiative to bring native applications capabilities to web applications. Let’s discuss what we can use today in our production.",
+      "versions": [
+        {
+          "slides": "fugu-status/",
+          "conference": "DevJam.io",
+          "conferenceLink": "https://2022.devjam.io/",
+          "video": "https://www.youtube.com/watch?v=iC3fspqn3vA",
+          "date": "2022-09-30",
+          "language": "en"
+        },
+        {
+          "slides": "fugu-status/podlodka.html",
+          "conference": "Podlodka Frontend Crew #5",
+          "conferenceLink": "https://podlodka.io/fecrew",
+          "video": "https://youtu.be/m2RH-w-tXlU",
+          "date": "2022-12-07",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Chrome DevTools — спрятанные полезности",
+      "description": "Инструменты разработчика в браузерах хранят в себе много интересного и полезного, но до некоторых вещей не так просто достучаться из интерфейса. А некоторые просто прошли мимо, потому что про них мало кто говорит. Попробуем найти «помогаторы», которые позволяют решать ежедневные задачи эффективнее.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/i/03RwlsJVDh55ZA",
+          "conference": "FrontendConf 2022",
+          "conferenceLink": "https://frontendconf.ru/moscow/2022",
+          "video": "https://youtu.be/TiykIPnHvmI",
+          "date": "2022-10-24",
+          "language": "ru"
+        },
+        {
+          "slides": "https://disk.yandex.ru/i/03RwlsJVDh55ZA",
+          "conference": "YaTalks 2022",
+          "conferenceLink": "https://yatalks.yandex.ru/ru",
+          "video": "https://www.youtube.com/watch?v=70XMVfGv2Q0",
+          "date": "2022-12-04",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "«Мастер D&D» как стиль управления командой",
+      "description": "Уже почти 2 года я играю с друзьями в Dungeons & Dragons, причём полгода — в роли мастера. В докладе я расскажу, как интересный опыт создания приключения для друзей изменил моё мышление про работу над проектами, в которых я руковожу командами разработки.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/i/A6xXWS91zg7W-A",
+          "conference": "TeamLead Conf 2023",
+          "conferenceLink": "https://teamleadconf.ru/moscow/2023/abstracts/9783",
+          "date": "2023-02-27",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Давайте созвонимся на пару минут",
+      "description": "«Коллеги, давайте созвонимся на пару минут, чтобы быстро обсудить пару вопросов». Знакомая фраза в рабочем чате? Было ли такое, что к вам в календарь прилетали встречи, про которые совсем ничего не понятно из описания? Или, может, вас когда-нибудь приглашали на встречу, где вы могли бы и не присутствовать? В докладе поговорим про то, как разгрузить свой календарь и использовать любые созвоны с пользой.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/d/4XedHpu5aTJWbg",
+          "conference": "Podlodka Teamlead Crew #10",
+          "conferenceLink": "https://podlodka.io/tlcrew",
+          "video": "https://youtu.be/EEGM38yA9Wo",
+          "date": "2023-04-11",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Что нам стоит блог построить?",
+      "description": "Генератор статики 11ty позволяет из любого формата данных генерировать любой другой. В докладе рассмотрим, как использовать его возможности для создания производительных статических сайтов, как вместо CMS обходиться встроенными возможностями GitHub и зачем блогу нужен Open Web.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/i/jJOPLa0VNtKyBw",
+          "conference": "X5 Frontend Meetup #2",
+          "conferenceLink": "https://x5-retail-group-event.timepad.ru/event/2368323/",
+          "video": "https://www.youtube.com/watch?v=H59HVR53FVY",
+          "date": "2023-04-12",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Новые возможности CSS, которые меняют взгляд на вёрстку",
+      "description": "Благодаря инициативе Interop спецификации CSS не только быстро пишутся, но и внедряются в браузеры. Выражения от контейнера, новый синтаксис медиа-выражений, CSS-слои, родительские селекторы — эти и другие возможности заставляют пересмотреть подходы, которые много лет считались общепринятыми.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/d/fjplKtyLH9ecjg",
+          "conference": "Dump 2023",
+          "conferenceLink": "https://dump-ekb.ru/",
+          "date": "2023-04-21",
+          "language": "ru"
         }
       ]
     }
