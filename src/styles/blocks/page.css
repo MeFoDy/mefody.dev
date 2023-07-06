@@ -38,6 +38,7 @@
     margin-bottom: 1em;
     padding: 0;
     line-height: 1;
+    text-wrap: balance;
 }
 
 .page__content h1 {
