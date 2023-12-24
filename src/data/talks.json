@@ -534,7 +534,8 @@
           "conference": "HolyJS 2021 Moscow",
           "conferenceLink": "https://holyjs-moscow.ru/",
           "date": "2021-11-04",
-          "language": "ru"
+          "language": "ru",
+          "video": "https://youtu.be/ldHiqrlnVyA?si=-cMx19C6Slw4-KIe"
         }
       ]
     },
@@ -588,6 +589,7 @@
           "slides": "webhid/holyjs.html",
           "conference": "HolyJS 2022 Spring",
           "conferenceLink": "https://holyjs.ru/",
+          "video": "https://youtu.be/p9Nc3TaCdKw?si=HzoUlS__KwcTWu1c",
           "date": "2022-06-23",
           "language": "ru",
           "transcription": "https://habr.com/ru/company/jugru/blog/685534/"
@@ -702,7 +704,87 @@
           "slides": "https://disk.yandex.ru/d/fjplKtyLH9ecjg",
           "conference": "Dump 2023",
           "conferenceLink": "https://dump-ekb.ru/",
+          "video": "https://youtu.be/_JB-wXwryhw",
           "date": "2023-04-21",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Одно PWA, чтоб править всеми",
+      "description": "Термин PWA появился ещё в 2015 году, но из-за браузерных разногласий долгое время был лишь красивой идеей. В 2023 году появилась надежда, что на iOS появятся альтернативные браузерные движки, а это может привести к тому, что для создания почти полноценных приложений будет достаточно знаний фронтенда. В докладе рассказывается, что умеют современные PWA: как изменился их внешний вид, насколько они интегрированы в операционные системы и в каких случаях они решают пользовательские задачи не хуже нативных приложений.",
+      "versions": [
+        {
+          "slides": "pwa-2023/",
+          "conference": "HolyJS 2023 Spring",
+          "conferenceLink": "https://holyjs.ru/talks/4cc1606fcec44ed6b471a8d42d57b128/",
+          "video": "https://youtu.be/VoLhQS-hKOU?si=EdM3sXmCN2oMq0aI",
+          "date": "2023-05-21",
+          "language": "ru",
+          "transcription": "https://habr.com/ru/companies/jugru/articles/755844/"
+        },
+        {
+          "slides": "pwa-2023/udw.html",
+          "conference": "Ural Digital Weekend 2023",
+          "conferenceLink": "https://ural-digital-weekend.ru/",
+          "video": "https://www.youtube.com/live/xhHwK-6uyIo?si=62f6r7yZX106ce9d&t=9243",
+          "date": "2023-08-04",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Что нам стоит блог построить?",
+      "description": "Генератор статики 11ty позволяет из любого формата данных генерировать любой другой. В докладе рассмотрим, как использовать его возможности для создания производительных статических сайтов, как вместо CMS обходиться встроенными возможностями GitHub и зачем блогу нужен Open Web.",
+      "versions": [
+        {
+          "slides": "https://disk.yandex.ru/i/MjzqYySURRZAAQ",
+          "conference": "CodeFest 13",
+          "conferenceLink": "https://13.codefest.ru/",
+          "video": "https://youtu.be/VoLhQS-hKOU?si=EdM3sXmCN2oMq0aI",
+          "date": "2023-05-28",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "IndieWeb, или Ваш контент принадлежит вам",
+      "description": "Представьте, что у вас есть страничка в новом сервисе для микроблогов от компании Troodle. Вы собрали несколько тысяч подписчиков, постоянно наполняете микроблог контентом. И вот в какой-то момент Troodle решает закрыть сервис без сохранения ваших записей, потому что переориентация бизнеса. Знали ли вы, что есть целый ряд спецификаций, который делает ваш контент по-настоящему вашим? В докладе покажу, что входит в инициативу IndieWeb и как реализовать его идеи на своём сайте.",
+      "versions": [
+        {
+          "slides": "indieweb/",
+          "conference": "moscowcss_22",
+          "conferenceLink": "https://t.me/moscowcss",
+          "video": "https://youtu.be/KCDraR68_bA?si=VQBtZI8CNJPfRpMM&t=7896",
+          "date": "2023-07-06",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Алло, мы с нижнего этажа, у вас стили протекают",
+      "description": "С тех пор как одному DOM-элементу стало возможно добавить несколько CSS-классов, веб-разработчики ищут способы изолировать стили, избавиться от наследования, закрыть CSS-свойства в закрытую коробочку. БЭМ, Atomic CSS, OOCSS, Shadow DOM, CSS-in-JS, Styled Components — скорее всего, на вашем сайте есть что-то из этого списка. Почему до сих пор проблему не решили на уровне самого CSS? Или всё-таки решили?",
+      "versions": [
+        {
+          "slides": "css-isolation/",
+          "conference": "FrontendConf 2023",
+          "conferenceLink": "https://frontendconf.ru/moscow/2023/",
+          "video": "https://youtu.be/FeFMSZVFuBY",
+          "date": "2023-10-02",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "CSS first. Когда JS не нужен",
+      "description": "В 2023 году CSS умеет многие вещи, которые раньше были возможны только с подключенными JS-библиотеками. И эти библиотеки нужно было постоянно обновлять. Но принцип «Работает — не трогай» не дает нам облегчить бандл, а старая привычка, что какие-то фичи еще не работают во всех браузерах, усугубляет ситуацию. В докладе показываю, как переписать целые JS-библиотеки на CSS и в каких случаях это не стоит делать.",
+      "versions": [
+        {
+          "slides": "css-first/",
+          "conference": "HolyJS 2023 Autumn",
+          "conferenceLink": "https://holyjs.ru/archive/2023%20Autumn/",
+          "video": "",
+          "date": "2023-11-12",
           "language": "ru"
         }
       ]
@@ -803,6 +885,18 @@
       "name": "HTML, CSS и веб-стандарты: возможности, ошибки разработчиков и неизвестные фичи",
       "podcastLink": "https://youtu.be/V_6xeoAobtM",
       "date": "2022-08-25",
+      "lang": "ru"
+    },
+    {
+      "name": "Живое обсуждение актуальных тем о веб-платформе | Эфир с Никитой Дубко и Алексеем Родионовым",
+      "podcastLink": "https://youtu.be/DXdNTrpLzWw",
+      "date": "2023-10-30",
+      "lang": "ru"
+    },
+    {
+      "name": "Глеб Михеев и Никита Дубко в гостях у Доки // Внерабочие активности",
+      "podcastLink": "https://www.youtube.com/live/1jMr49xg9ac?si=1yKEV7FtN8cO_LHX",
+      "date": "2023-09-11",
       "lang": "ru"
     }
   ]
