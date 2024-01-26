@@ -5,18 +5,14 @@
     align-items: flex-end;
 }
 
-.header__logo {
-    width: auto;
-    height: calc(var(--line-space) * 4);
-}
-
 .header__link {
     margin: var(--line-space) 0;
     margin-left: 1em;
-    color: var(--color-accent);
+    color: var(--color-text);
     font-weight: bold;
     letter-spacing: 0.2em;
     text-decoration: none;
+    background-color: var(--color-accent);
 }
 
 @media (max-width: 1000px) {

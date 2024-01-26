@@ -30,10 +30,6 @@
     filter: brightness(0.95);
 }
 
-.header__logo {
-    filter: invert(1);
-}
-
 .social-list__link--github::before {
     --social-icon: url('/images/github-logo-light.svg');
 }
