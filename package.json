@@ -22,7 +22,8 @@
     "lint:editorconfig": "editorconfig-checker",
     "lint:js": "eslint .",
     "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js",
-    "prepare": "npx simple-git-hooks"
+    "prepare": "npx simple-git-hooks",
+    "generate-weekly-links": "node _11ty/scripts/weekly-links.js"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
@@ -30,6 +31,7 @@
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
     "autoprefixer": "^10.4.9",
     "datauri": "^4.1.0",
+    "date-fns": "^3.3.1",
     "del": "^6.0.0",
     "dotenv": "^16.0.2",
     "editorconfig-checker": "^5.1.2",

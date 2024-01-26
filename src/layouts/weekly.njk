@@ -1,0 +1,23 @@
+---
+layout: page.njk
+---
+<div class="collection">
+    <div class="collection__head">
+        <h1 class="collection__title">{{ title }}</h1>
+        <p class="collection__description">
+            {{ description }}
+        </p>
+    </div>
+    <ul class="collection__list">
+        {%- for item in collections.withTags | filterCollection('weekly') | sortByDate | reverse -%}
+            <li class="collection__item">
+                <a href="{{ item.url }}" class="collection__item-link">
+                    <h2 class="collection__item-title">{{ item.data.title }}</h2>
+                </a>
+                <div class="collection__item-meta">
+                    <div class="collection__item-minutes-to-read">Number of links: {{ item.data.linksCount }}</div>
+                </div>
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>

@@ -61,6 +61,16 @@
     list-style-position: inside;
 }
 
+.article .article__links-list ul {
+    list-style-position: outside;
+    list-style-type: square;
+}
+
+.article .article__links-list ul li {
+    margin-bottom: var(--line-space);
+    margin-left: var(--line-space);
+}
+
 .article ::marker {
     color: var(--color-accent);
 }
