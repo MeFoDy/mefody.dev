@@ -23,8 +23,8 @@
     --color-red: #ff4d00;
     --color-accent-base: 255, 204, 0;
 
-    --line-height: 1.34;
-    --font-size: 18px;
+    --line-height: 1.42;
+    --font-size: 20px;
     --line-space: calc(var(--line-height) * 1em);
     --main-column-width: 700px;
     --max-column-width: 1000px;
@@ -71,6 +71,6 @@
 
 @media (max-width: 600px) {
     :root {
-        --font-size: 16px;
+        --font-size: 18px;
     }
 }
