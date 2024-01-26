@@ -12,6 +12,11 @@
 
 .header__link {
     margin: var(--line-space) 0;
+    margin-left: 1em;
+    color: var(--color-accent);
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-decoration: none;
 }
 
 @media (max-width: 1000px) {
@@ -20,5 +25,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .header__link {
+        margin-right: 1em;
+        margin-left: 0;
     }
 }

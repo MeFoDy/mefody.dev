@@ -30,6 +30,6 @@
 
 @media (max-width: 1000px) {
     .site-nav__item a {
-        padding: 1em 0;
+        padding: 0.5em 0;
     }
 }
