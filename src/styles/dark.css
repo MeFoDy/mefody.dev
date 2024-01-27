@@ -6,7 +6,10 @@
     --color-text: var(--color-white);
     --color-outline: var(--color-red);
     --color-subtext: var(--color-lightgrey);
-    --color-accent-base: 136, 0, 136;
+    --color-accent: #880088;
+    --color-accent-alpha: rgb(136 0 136 / 0.3);
+    --color-link: #ffaaff;
+    --color-link-visited: #aaaaff;
     --color-code: var(--color-lightgrey);
     --color-delimeter: var(--color-darkgrey);
 

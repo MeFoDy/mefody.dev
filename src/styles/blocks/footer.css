@@ -5,9 +5,13 @@
 }
 
 .footer a {
-    color: var(--color-subtext);
+    color: var(--color-link);
     text-decoration-color: var(--color-accent);
     text-decoration-thickness: 2px;
+}
+
+.footer a:visited {
+    color: var(--color-link-visited);
 }
 
 .footer a:hover {

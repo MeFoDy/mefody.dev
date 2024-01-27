@@ -45,9 +45,13 @@
 }
 
 .article a {
-    color: var(--color-subtext);
+    color: var(--color-link);
     text-decoration-color: var(--color-accent);
     text-decoration-thickness: 2px;
+}
+
+.article a:visited {
+    color: var(--color-link-visited);
 }
 
 .article a:hover {
@@ -203,7 +207,8 @@
     content: '';
 }
 
-.article__nav-button[class] {
+.article__nav-button[class],
+.article__nav-button[class]:visited {
     position: relative;
     display: block;
     padding: var(--line-space);

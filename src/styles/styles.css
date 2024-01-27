@@ -21,7 +21,10 @@
     --color-lightgrey: #bebbbb;
     --color-darkgrey: #514f4f;
     --color-red: #ff4d00;
-    --color-accent-base: 255, 204, 0;
+    --color-accent: #ffcc00;
+    --color-accent-alpha: rgb(255 204 0 / 0.3);
+    --color-link: #665500;
+    --color-link-visited: #000000;
 
     --line-height: 1.42;
     --font-size: 20px;
@@ -41,8 +44,6 @@
     --color-text: var(--color-black);
     --color-subtext: var(--color-grey);
     --color-outline: var(--color-red);
-    --color-accent: rgb(var(--color-accent-base));
-    --color-accent-alpha: rgba(var(--color-accent-base), 0.3);
     --color-code: var(--color-darkgrey);
     --color-delimeter: var(--color-lightgrey);
 
