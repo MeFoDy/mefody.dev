@@ -25,6 +25,7 @@
 
 .footer__about {
     margin: 0;
+    margin-right: var(--line-space);
     padding: 0;
 }
 
