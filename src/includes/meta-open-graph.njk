@@ -4,8 +4,14 @@
     {% set titleSuffix = '' %}
 {% endif %}
 
+{% set httpRegExp = r/^https?\:\/\/.*/g %}
+
 {% if cover %}
-    {% set ogImage = site.paths.site + page.url + cover %}
+    {% if httpRegExp.test(cover) %}
+        {% set ogImage = cover %}
+    {% else %}
+        {% set ogImage = site.paths.site + page.url + cover %}
+    {% endif %}
 {% else %}
     {% set ogImage = site.paths.social %}
 {% endif %}

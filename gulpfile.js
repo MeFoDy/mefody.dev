@@ -151,6 +151,7 @@ gulp.task('contributors:get', () => {
         'n.a.dubko@gmail.com',
         'mefody@yandex-team.ru',
         'mefody93@gmail.com',
+        'MeFoDy@users.noreply.github.com',
     ];
     const contributorsNames = contributors
         .split('\n')
