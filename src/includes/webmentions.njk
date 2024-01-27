@@ -1,6 +1,7 @@
 {%- set mentions = webmentions.children | webmentionsByUrl(page.url) -%}
 <section class="webmentions">
-    <h2>Webmentions <a href="https://indieweb.org/Webmention" target="_blank" aria-label="What is it?">[?]</a><span class="webmentions__likes">, <span aria-label="Likes count">❤︎</span> {{ (webmentions.children | likesAndRepostsByUrl(page.url)).likes }}</span></h2>
+    <h2>Webmentions <a href="https://indieweb.org/Webmention" target="_blank" aria-label="What is it?">[?]</a> <small class="webmentions__likes">(likes: {{ (webmentions.children | likesAndRepostsByUrl(page.url)).likes }},
+        reposts:  {{ (webmentions.children | likesAndRepostsByUrl(page.url)).reposts }})</small></h2>
     {% if mentions | length %}
         <ol class="webmentions__list">
         {% for webmention in mentions %}
