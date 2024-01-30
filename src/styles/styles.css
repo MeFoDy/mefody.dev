@@ -33,6 +33,7 @@
     --max-column-width: 1000px;
     --mobile-border-width: 15px;
 
+    --transition-duration-s: 0.2s;
     --transition-duration-l: 0.5s;
     --transition-timing: ease;
 

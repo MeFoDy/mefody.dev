@@ -26,11 +26,22 @@
 }
 
 .article img {
+    box-shadow: 0 0 1px 0 var(--color-white);
     filter: grayscale(30%) brightness(0.95);
+    transition: filter var(--transition-duration-s);
+}
+
+.article img:hover {
+    filter: grayscale(30%) brightness(1);
 }
 
 .article video {
     filter: brightness(0.95);
+    transition: filter var(--transition-duration-s);
+}
+
+.article video:hover {
+    filter: brightness(1);
 }
 
 .social-list__link--github::before {
