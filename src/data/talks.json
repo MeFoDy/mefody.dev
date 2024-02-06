@@ -693,6 +693,14 @@
           "video": "https://www.youtube.com/watch?v=H59HVR53FVY",
           "date": "2023-04-12",
           "language": "ru"
+        },
+        {
+          "slides": "https://disk.yandex.ru/i/MjzqYySURRZAAQ",
+          "conference": "CodeFest 13",
+          "conferenceLink": "https://13.codefest.ru/",
+          "video": "https://www.youtube.com/watch?v=LWRA6kDVLxY",
+          "date": "2023-05-28",
+          "language": "ru"
         }
       ]
     },
@@ -734,20 +742,6 @@
       ]
     },
     {
-      "title": "Что нам стоит блог построить?",
-      "description": "Генератор статики 11ty позволяет из любого формата данных генерировать любой другой. В докладе рассмотрим, как использовать его возможности для создания производительных статических сайтов, как вместо CMS обходиться встроенными возможностями GitHub и зачем блогу нужен Open Web.",
-      "versions": [
-        {
-          "slides": "https://disk.yandex.ru/i/MjzqYySURRZAAQ",
-          "conference": "CodeFest 13",
-          "conferenceLink": "https://13.codefest.ru/",
-          "video": "https://www.youtube.com/watch?v=LWRA6kDVLxY",
-          "date": "2023-05-28",
-          "language": "ru"
-        }
-      ]
-    },
-    {
       "title": "IndieWeb, или Ваш контент принадлежит вам",
       "description": "Представьте, что у вас есть страничка в новом сервисе для микроблогов от компании Troodle. Вы собрали несколько тысяч подписчиков, постоянно наполняете микроблог контентом. И вот в какой-то момент Troodle решает закрыть сервис без сохранения ваших записей, потому что переориентация бизнеса. Знали ли вы, что есть целый ряд спецификаций, который делает ваш контент по-настоящему вашим? В докладе покажу, что входит в инициативу IndieWeb и как реализовать его идеи на своём сайте.",
       "versions": [
@@ -783,7 +777,7 @@
           "slides": "css-first/",
           "conference": "HolyJS 2023 Autumn",
           "conferenceLink": "https://holyjs.ru/archive/2023%20Autumn/",
-          "video": "",
+          "video": "https://youtu.be/G_GwPX6hM9M",
           "date": "2023-11-12",
           "language": "ru"
         }
