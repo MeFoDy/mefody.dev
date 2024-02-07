@@ -2,8 +2,7 @@ require('dotenv').config();
 
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const babel = require('gulp-babel');
-const terser = require('gulp-terser');
+// const swc = require('gulp-swc');
 const del = require('del');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
@@ -35,26 +34,16 @@ gulp.task('styles', () => {
 
 // Scripts
 
-gulp.task('scripts', () => {
-    return gulp
-        .src(`${PUBLIC_PATH}/scripts/*.js`)
-        .pipe(
-            babel({
-                presets: [
-                    [
-                        '@babel/preset-env',
-                        {
-                            targets: {
-                                esmodules: true,
-                            },
-                        },
-                    ],
-                ],
-            }),
-        )
-        .pipe(terser())
-        .pipe(gulp.dest(`${PUBLIC_PATH}/scripts`));
-});
+// gulp.task('scripts', () => {
+//     return gulp
+//         .src(`${PUBLIC_PATH}/scripts/*.js`)
+//         .pipe(
+//             swc({
+//                 minify: true,
+//             }),
+//         )
+//         .pipe(gulp.dest(`${PUBLIC_PATH}/scripts`));
+// });
 
 // Clean
 
@@ -62,8 +51,8 @@ gulp.task('clean', () => {
     return del([
         `${PUBLIC_PATH}/styles/**/*`,
         `!${PUBLIC_PATH}/styles/{styles,dark}.css`,
-        `${PUBLIC_PATH}/scripts/**/*`,
-        `!${PUBLIC_PATH}/scripts/scripts.js`,
+        // `${PUBLIC_PATH}/scripts/**/*`,
+        // `!${PUBLIC_PATH}/scripts/scripts.js`,
     ]);
 });
 
@@ -75,7 +64,7 @@ gulp.task('cache:hash', () => {
             [
                 `${PUBLIC_PATH}/fonts/*.woff2`,
                 `${PUBLIC_PATH}/images/**/*.{svg,png,jpg,avif}`,
-                `${PUBLIC_PATH}/scripts/*.js`,
+                // `${PUBLIC_PATH}/scripts/*.js`,
                 `${PUBLIC_PATH}/styles/*.css`,
                 `${PUBLIC_PATH}/manifest.webmanifest`,
             ],
@@ -191,7 +180,7 @@ gulp.task('humans:generate', () => {
 gulp.task(
     'build',
     gulp.parallel(
-        gulp.series('styles', 'scripts', 'clean', 'cache', 'service-worker'),
+        gulp.series('styles', 'clean', 'cache', 'service-worker'),
         gulp.series('contributors:get', 'humans:generate'),
     ),
 );
