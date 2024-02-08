@@ -1,6 +1,6 @@
 ---
 title: A CSS editor written in CSS
-description: TODO
+description: No JavaScript, no libraries. Modern CSS and HTML only.
 cover: images/cover.jpg
 date: 2024-02-08
 dateUpdated: Last Modified
