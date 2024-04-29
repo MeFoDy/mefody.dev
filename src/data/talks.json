@@ -663,6 +663,7 @@
           "slides": "https://disk.yandex.ru/i/A6xXWS91zg7W-A",
           "conference": "TeamLead Conf 2023",
           "conferenceLink": "https://teamleadconf.ru/moscow/2023/abstracts/9783",
+          "video": "https://youtu.be/uE6F4_pxU9o",
           "date": "2023-02-27",
           "language": "ru"
         }
@@ -779,6 +780,34 @@
           "conferenceLink": "https://holyjs.ru/archive/2023%20Autumn/",
           "video": "https://youtu.be/G_GwPX6hM9M",
           "date": "2023-11-12",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "Cycle Time, Feature Time, Lead Time. Радуем пользователей быстрее при помощи графиков",
+      "description": "Скорее всего у вас в команде есть какие-то процессы доставки фичей до продакшена. И, возможно, вы даже пробуете эти процессы оптимизировать, чтобы и фичи доставлялись быстрее, и команда не разбежалась в огне. В докладе делюсь своим опытом анализа метрик Cycle Time, Feature Time и Lead Time при помощи графиков. Рассказываю, как такие графики могут выглядеть и как выстроить регулярные процессы работы с ними.",
+      "versions": [
+        {
+          "slides": "https://drive.google.com/file/d/1bSF2zwnjcD-1KSxjMdrcaJm2bn-b9rzb/view",
+          "conference": "Podlodka Teamlead Crew #12",
+          "conferenceLink": "https://podlodka.io/tlcrew",
+          "video": "https://youtu.be/_5ibUw93kEo",
+          "date": "2024-04-03",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "title": "По-настоящему красивые переходы средствами браузера",
+      "description": "View Transitions API и Scroll-driven Animations — новые интересные фичи, которые уже позволяют в некоторых браузерах делать очень красивые переходы между состояниями веб-приложений. Представьте клик на карточку товара, который плавно дорисовывает весь остальной интерфейс вокруг самой карточки. Или анимации, привязанные к скроллу, но не требующие никаких библиотек для этого. В докладе расскажу и покажу, как таким пользоваться уже сейчас.",
+      "versions": [
+        {
+          "slides": "pretty-transitions/",
+          "conference": "Dump SPB 2024",
+          "conferenceLink": "https://dump-spb.ru/",
+          "video": "https://youtu.be/Dud0DozVwvo",
+          "date": "2024-02-17",
           "language": "ru"
         }
       ]
