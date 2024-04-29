@@ -56,7 +56,7 @@ function writePost(raindrops) {
 function main() {
     fetchLinks().then((res) => {
         if (res.items.length === 0) {
-            // eslint-disable-next-line no-console
+            // biome-ignore lint/suspicious/noConsoleLog: Message on build
             console.log('No links found, exiting');
             return;
         }

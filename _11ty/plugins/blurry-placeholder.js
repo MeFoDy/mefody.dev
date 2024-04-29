@@ -49,10 +49,11 @@ function escaper(match) {
 const cache = {};
 
 function getCachedDataURI(src) {
-    if (cache[src]) {
-        return cache[src];
+    if (!cache[src]) {
+        cache[src] = getDataURI(src)
     }
-    return cache[src] = getDataURI(src);
+
+    return cache[src];
 }
 
 async function getDataURI(src) {

@@ -17,15 +17,16 @@
     "prod": "npm run build:prod && npx live-server _public",
     "build": "rm -rf _public && eleventy && gulp build",
     "build:prod": "ELEVENTY_ENV=production npm run build",
-    "fix": "eslint --fix && stylelint --fix \"src/styles/**/*.css\"",
+    "fix": "biome lint --apply . && stylelint --fix \"src/styles/**/*.css\"",
     "lint:css": "stylelint \"src/styles/**/*.css\"",
     "lint:editorconfig": "editorconfig-checker",
-    "lint:js": "eslint .",
+    "lint:js": "biome lint .",
     "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js",
     "prepare": "npx simple-git-hooks",
     "generate-weekly-links": "node _11ty/scripts/weekly-links.js"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.7.1",
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
     "autoprefixer": "^10.4.17",
     "datauri": "^4.1.0",
@@ -33,7 +34,6 @@
     "del": "^6.0.0",
     "dotenv": "^16.4.1",
     "editorconfig-checker": "^5.1.3",
-    "eslint": "^8.56.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^10.0.0",
     "gulp-replace": "^1.1.4",
@@ -63,7 +63,7 @@
       "editorconfig-checker"
     ],
     "*.js": [
-      "eslint --fix"
+      "biome lint --apply"
     ],
     "*.css": [
       "stylelint --fix"

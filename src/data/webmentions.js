@@ -38,7 +38,7 @@ async function fetchWebmentions(since, perPage = 10000) {
     const response = await fetch(url);
     if (response.ok) {
         const feed = await response.json();
-        console.log(
+        console.info(
             `>>> ${feed.children.length} new webmentions fetched from ${API}`
         );
         return feed;
@@ -63,7 +63,7 @@ function writeToCache(data) {
     // write data to cache json file
     fs.writeFile(filePath, fileContent, (err) => {
         if (err) {throw err;}
-        console.log(`>>> webmentions saved to ${filePath}`);
+        console.info(`>>> webmentions saved to ${filePath}`);
     });
 }
 
@@ -87,7 +87,7 @@ module.exports = async function () {
     const cache = readFromCache();
 
     if (cache.children.length) {
-        console.log(
+        console.info(
             `>>> ${cache.children.length} webmentions loaded from cache`
         );
     }

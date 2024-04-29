@@ -262,8 +262,8 @@ module.exports = function (config) {
 
     config.setBrowserSyncConfig({
         callbacks: {
-            ready: function (err, bs) {
-                bs.addMiddleware('*', (req, res) => {
+            ready: function (_err, bs) {
+                bs.addMiddleware('*', (_req, res) => {
                     const content_404 = fs.readFileSync('_public/404.html');
                     res.writeHead(404, {
                         'Content-Type': 'text/html; charset=UTF-8',

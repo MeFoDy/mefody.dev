@@ -27,7 +27,7 @@ const processImage = async (img, outputPath) => {
     let dimensions;
     try {
         dimensions = await imageSize(`${SITE_PATH}/` + fullSrc);
-    } catch (e) {
+    } catch (_e) {
         // console.warn(e.message, src);
         return;
     }
