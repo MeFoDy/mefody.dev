@@ -28,7 +28,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
-    "autoprefixer": "^10.4.17",
     "datauri": "^4.1.0",
     "date-fns": "^3.3.1",
     "del": "^6.0.0",
@@ -47,9 +46,8 @@
     "netlify-plugin-webmentions": "^1.1.1",
     "node-fetch": "^2.0.0",
     "postcss": "^8.4.35",
-    "postcss-color-hex-alpha": "^9.0.3",
-    "postcss-csso": "^6.0.1",
     "postcss-import": "^16.0.0",
+    "postcss-lightningcss": "^1.0.0",
     "sanitize-html": "^2.11.0",
     "sharp": "^0.33.2",
     "simple-git-hooks": "^2.9.0",

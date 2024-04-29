@@ -24,9 +24,7 @@ gulp.task('styles', () => {
         .pipe(
             postcss([
                 require('postcss-import'),
-                require('postcss-color-hex-alpha'),
-                require('autoprefixer')({ grid: 'autoplace' }),
-                require('postcss-csso'),
+                require('postcss-lightningcss'),
             ]),
         )
         .pipe(gulp.dest(`${PUBLIC_PATH}/styles`));
