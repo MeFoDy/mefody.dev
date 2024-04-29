@@ -90,24 +90,3 @@ h2.collection__item-title {
         margin-top: 1em;
     }
 }
-
-@supports (view-timeline: --works) {
-    .collection__item {
-        view-timeline-axis: block;
-        view-timeline-name: --collection-item-in-view;
-        animation: linear scroll-appear both;
-        animation-duration: auto;
-        animation-timeline: --collection-item-in-view;
-        animation-range: contain 0% contain 40%;
-    }
-
-    @keyframes scroll-appear {
-        0% {
-            opacity: 0.2;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-}
