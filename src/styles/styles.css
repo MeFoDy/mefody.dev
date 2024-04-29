@@ -38,6 +38,8 @@
     --transition-timing: ease;
 
     --font-code: 'Fira Code', monospace;
+    --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', 'P052', serif;
+    --font-sans-serif: system-ui, sans-serif;
 }
 
 :root {

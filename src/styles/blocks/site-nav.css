@@ -13,6 +13,7 @@
 
 .site-nav__item {
     display: block;
+    font-family: var(--font-serif);
 }
 
 .site-nav__item a {
