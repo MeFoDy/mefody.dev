@@ -1,4 +1,15 @@
 [[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = """
+      default-src 'self';
+      frame-ancestors 'self';
+      style-src-elem 'self' 'unsafe-inline';
+      """
+    Cross-Origin-Resource-Policy = "same-origin"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+[[headers]]
   for = "*.avif"
   [headers.values]
     Content-Type = "image/avif"
