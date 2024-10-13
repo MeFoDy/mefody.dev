@@ -9,6 +9,7 @@
       """
     Cross-Origin-Resource-Policy = "same-origin"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
 [[headers]]
   for = "*.avif"
   [headers.values]
