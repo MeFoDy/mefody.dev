@@ -8,7 +8,7 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 charset = utf-8
 
-[{*.json,*.yml,*.toml}]
+[{*.json,*.yml,*.yaml,*.toml}]
 indent_size = 2
 
 [*.txt]
@@ -16,3 +16,6 @@ indent_size = off
 
 [src/data/contributors.json]
 insert_final_newline = false
+
+[src/humans.txt]
+indent_style = tab

@@ -14,15 +14,16 @@
   },
   "scripts": {
     "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
-    "prod": "npm run build:prod && npx live-server _public",
+    "prod": "pnpm run build:prod && npx live-server _public",
     "build": "rm -rf _public && eleventy && gulp build",
-    "build:prod": "ELEVENTY_ENV=production npm run build",
+    "build:prod": "ELEVENTY_ENV=production pnpm run build",
     "fix": "biome lint --apply . && stylelint --fix \"src/styles/**/*.css\"",
     "lint:css": "stylelint \"src/styles/**/*.css\"",
     "lint:editorconfig": "editorconfig-checker",
     "lint:js": "biome lint .",
-    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js",
+    "lint": "pnpm run lint:editorconfig && pnpm run lint:css && pnpm run lint:js",
     "prepare": "npx simple-git-hooks",
+    "preinstall": "npx only-allow pnpm",
     "generate-weekly-links": "node _11ty/scripts/weekly-links.js"
   },
   "devDependencies": {
@@ -30,7 +31,7 @@
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
     "datauri": "^4.1.0",
     "date-fns": "^3.6.0",
-    "del": "^6.0.0",
+    "del": "^6.1.1",
     "dotenv": "^16.4.5",
     "editorconfig-checker": "^5.1.5",
     "gulp": "^5.0.0",
@@ -44,7 +45,7 @@
     "lodash": "^4.17.21",
     "minify-xml": "^4.4.1",
     "netlify-plugin-webmentions": "^1.1.1",
-    "node-fetch": "^2.0.0",
+    "node-fetch": "^2.7.0",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-lightningcss": "^1.0.0",
@@ -69,6 +70,6 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
-    "pre-push": "npm run lint"
+    "pre-push": "pnpm run lint"
   }
 }
