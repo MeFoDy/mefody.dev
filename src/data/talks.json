@@ -867,6 +867,20 @@
           "language": "ru"
         }
       ]
+    },
+    {
+      "title": "Дебаг производительности страницы средствами браузера",
+      "description": "Когда я впервые открыл вкладку Performance в девтулзах и покликал на разные элементы — ничего не понял и закрыл. А на самом деле это очень полезный инструмент с большим количеством возможностей. За несколько лет удалось разобраться, что же всё-таки обозначают разные кнопки-ссылки, поэтому в докладе расскажу, как пользоваться этой вкладкой и удивлять коллег быстрым решением проблем.",
+      "versions": [
+        {
+          "slides": "devtools-performance-page/Debugging-Page-Performance-with-Browser-Tools.pdf",
+          "conference": "Tbilisi JS Meetup #3",
+          "conferenceLink": "https://t.me/tbilisi_js/201",
+          "video": "https://youtu.be/CBi-ycq3tuo",
+          "date": "2024-10-31",
+          "language": "ru"
+        }
+      ]
     }
   ],
   "podcasts": [
